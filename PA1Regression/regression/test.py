@@ -11,6 +11,7 @@ from pylab import *
 import matplotlib.pylab as plt
 from scipy.optimize import linprog
 from scipy import stats
+from cvxopt import matrix, solvers
 
 
 class Regression:
@@ -38,7 +39,7 @@ class Regression:
         matPhi = self.genPhi()
         theta_LS = (matPhi * matPhi.T).I * matPhi * np.mat(self.vecY).T
         # print theta_LS
-        plt.subplot(221, xlabel="Least Squares")
+        plt.subplot(321, xlabel="Least Squares")
         self.plotReg(theta_LS)
 
     # regularized LS (RLS)
@@ -47,7 +48,7 @@ class Regression:
         matPhi = self.genPhi()
         matUnit = np.identity((matPhi * matPhi.T).shape[0])
         theta_RLS = (matPhi * matPhi.T + lambda_ * matUnit).I * matPhi * np.mat(self.vecY).T
-        plt.subplot(222, xlabel="Regularized")
+        plt.subplot(322, xlabel="Regularized")
         self.plotReg(theta_RLS)
 
 
@@ -83,9 +84,9 @@ class Regression:
 
         vecF = []
         for i in range(self.polyOrder + 1):
-            vecF.append(0)
+            vecF.append(0.0)
         for i in range(len(self.vecX)):
-            vecF.append(1)
+            vecF.append(1.0)
         vecF = np.array(vecF)
 
         matPhi = self.genPhi()
@@ -93,16 +94,17 @@ class Regression:
         matA_1 = np.column_stack((-matPhi.T, -matIdentity))
         matA_2 = np.column_stack((matPhi.T, -matIdentity))
         matA = np.row_stack((matA_1, matA_2))
-        # print matA.shape
         vec_b = np.concatenate((-self.vecY, self.vecY))
         # objectiveFunc = lambda X: vecF.T * X
         # consFunc = lambda X: -(matA * X - vec_b)
-        res = linprog(vecF, A_ub = matA, b_ub = vec_b)
-        # print res
-        theta_ = res.get("x")[:6]
-        # print theta_
-        plt.subplot(223, xlabel="Robust")
+        # res = linprog(vecF, A_ub=matA, b_ub=vec_b)
+        # theta_ = res.x[:6]
+        sol = solvers.lp(matrix(vecF), matrix(matA), matrix(vec_b))
+        theta_ =  list(sol['x'][:6])
+        print theta_
+        plt.subplot(323, xlabel="Robust")
         self.plotReg(theta_)
+
 
     def baysesianReg(self):
         alpha_ = 1
@@ -116,6 +118,7 @@ class Regression:
 
         f = lambda x, n: x ** n
         resY = []
+        varErr = []
         for x in testX:
             phi_s = []
             for i in range(self.polyOrder + 1):
@@ -123,22 +126,44 @@ class Regression:
             phi_s = np.mat(phi_s)
             mu_s = phi_s * mu_theta
             sigma_s = phi_s * sigma_theta * phi_s.T
-            # print mu_s.tolist()[0][0]
+            
+            varErr.append(sqrt(sigma_s.tolist()[0][0]))
             resY.append(mu_s.tolist()[0][0])
-        print resY
 
-        plt.subplot(224, xlabel="Baysesian")
-        plt.plot(testX, resY)
+        plt.subplot(324, xlabel="Baysesian")
+        # plt.plot(testX, resY)
+        plt.errorbar(testX, resY, yerr=varErr, ecolor="red")
         plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
 
+    def lassoReg(self):
+        lambda_ = 1.0
+        x_dim = 2 * (self.polyOrder + 1)
+        matPhi = self.genPhi()
+        matH_1 = np.column_stack((matPhi*matPhi.T, -matPhi*matPhi.T))
+        matH_2 = np.column_stack((-matPhi*matPhi.T, matPhi*matPhi.T))
+        matH = np.row_stack((matH_1, matH_2))
+        print matH
+        mat_func = lambda_ * np.mat(np.ones(x_dim)).T - np.row_stack((matPhi* (np.mat(self.vecY)).T, -matPhi* (np.mat(self.vecY).T)))
+        print mat_func
+        matG = np.identity(x_dim)
+        vec_h = np.zeros(x_dim)
+
+        sol = solvers.qp(matrix(matH), matrix(mat_func), matrix(matG), matrix(vec_h))
+        # print sol['x']
+
+        theta_ = list(sol['x'][:6] - sol['x'][6:])
+        # print theta_
+        plt.subplot(325, xlabel="Lasso")
+        self.plotReg(theta_)
 
 reg = Regression()
+
 
 reg.leastSquaresReg()  # least_squares(LS)
 reg.regularizedLSReg()   # regularized LS (RLS)
 reg.robustReg()   # Robust Regression (RR)
-
-reg.baysesianReg()
+reg.baysesianReg() # Baysesian Regression (BR)
+reg.lassoReg()   # Lasso Regression (Lasso)
 
 plt.show()
 
