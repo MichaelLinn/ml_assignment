@@ -38,7 +38,7 @@ class Regression:
         matPhi = self.genPhi()
         theta_LS = (matPhi * matPhi.T).I * matPhi * np.mat(self.vecY).T
         # print theta_LS
-        plt.subplot(221)
+        plt.subplot(221, xlabel="Least Squares")
         self.plotReg(theta_LS)
 
     # regularized LS (RLS)
@@ -47,7 +47,7 @@ class Regression:
         matPhi = self.genPhi()
         matUnit = np.identity((matPhi * matPhi.T).shape[0])
         theta_RLS = (matPhi * matPhi.T + lambda_ * matUnit).I * matPhi * np.mat(self.vecY).T
-        plt.subplot(222)
+        plt.subplot(222, xlabel="Regularized")
         self.plotReg(theta_RLS)
 
 
@@ -101,7 +101,7 @@ class Regression:
         # print res
         theta_ = res.get("x")[:6]
         # print theta_
-        plt.subplot(223)
+        plt.subplot(223, xlabel="Robust")
         self.plotReg(theta_)
 
     def baysesianReg(self):
@@ -123,11 +123,11 @@ class Regression:
             phi_s = np.mat(phi_s)
             mu_s = phi_s * mu_theta
             sigma_s = phi_s * sigma_theta * phi_s.T
-            resY.append(stats.norm.pdf(x, loc=mu_s, scale=sqrt(sigma_s))[0])
-        # print testX
-        # print resY
+            # print mu_s.tolist()[0][0]
+            resY.append(mu_s.tolist()[0][0])
+        print resY
 
-        plt.subplot(224)
+        plt.subplot(224, xlabel="Baysesian")
         plt.plot(testX, resY)
         plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
 
