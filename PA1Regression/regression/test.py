@@ -64,8 +64,16 @@ class Regression:
         p = np.poly1d(theta_)
         resY = p(testX)
 
+        predictY = p(self.vecX)
+
+        error = self.countMeanSqureErr(predictY, self.vecY)
+        text = "Error=" + str(error)
+        plt.text(-0.5,25,text)
+
         plt.plot(testX, resY)
         plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
+
+
 
     def genPhi(self):
 
@@ -102,6 +110,8 @@ class Regression:
         sol = solvers.lp(matrix(vecF), matrix(matA), matrix(vec_b))
         theta_ =  list(sol['x'][:6])
         print theta_
+
+
         plt.subplot(323, xlabel="Robust")
         self.plotReg(theta_)
 
@@ -126,13 +136,29 @@ class Regression:
             phi_s = np.mat(phi_s)
             mu_s = phi_s * mu_theta
             sigma_s = phi_s * sigma_theta * phi_s.T
-            
+
             varErr.append(sqrt(sigma_s.tolist()[0][0]))
             resY.append(mu_s.tolist()[0][0])
+
+        predictY = []
+        for x in self.vecX:
+            phi_s = []
+            for i in range(self.polyOrder + 1):
+                phi_s.append(f(x, i))
+            phi_s = np.mat(phi_s)
+            mu_s = phi_s * mu_theta
+            # sigma_s = phi_s * sigma_theta * phi_s.T
+            predictY.append(mu_s.tolist()[0][0])
+
+
+        err = self.countMeanSqureErr(predictY, self.vecY)
+        text = "Error=" + str(err)
 
         plt.subplot(324, xlabel="Baysesian")
         # plt.plot(testX, resY)
         plt.errorbar(testX, resY, yerr=varErr, ecolor="red")
+        plt.text(-0.5, 25, text)
+
         plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
 
     def lassoReg(self):
@@ -155,6 +181,14 @@ class Regression:
         # print theta_
         plt.subplot(325, xlabel="Lasso")
         self.plotReg(theta_)
+
+    def countMeanSqureErr(self, resY, trueY):
+        p_y = np.array(resY)
+        t_y = np.array(trueY)
+        err = sum((p_y - t_y) ** 2)
+        return err
+
+
 
 reg = Regression()
 
