@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 10/1/17 5:22 PM
 # @Author  : Jason Lin
-# @File    : test.py
+# @File    : polynomial_function.py
 # @Software: PyCharm Community Edition
 
 import pandas as pd
@@ -31,6 +31,8 @@ class Regression:
         self.vecX = np.loadtxt("polydata_data_sampx.txt")
         self.vecY = np.loadtxt("polydata_data_sampy.txt")
 
+        self.polyx = np.loadtxt("polydata_data_polyx.txt")
+        self.polyy = np.loadtxt("polydata_data_polyy.txt")
         # scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
         # show()
 
@@ -64,9 +66,9 @@ class Regression:
         p = np.poly1d(theta_)
         resY = p(testX)
 
-        predictY = p(self.vecX)
+        predictY = p(self.polyx)
 
-        error = self.countMeanSqureErr(predictY, self.vecY)
+        error = self.countMeanSqureErr(predictY, self.polyy)
         text = "Error=" + str(error)
         plt.text(-0.5,25,text)
 
@@ -111,7 +113,6 @@ class Regression:
         theta_ =  list(sol['x'][:6])
         print theta_
 
-
         plt.subplot(323, xlabel="Robust")
         self.plotReg(theta_)
 
@@ -141,7 +142,7 @@ class Regression:
             resY.append(mu_s.tolist()[0][0])
 
         predictY = []
-        for x in self.vecX:
+        for x in self.polyx:
             phi_s = []
             for i in range(self.polyOrder + 1):
                 phi_s.append(f(x, i))
@@ -151,7 +152,7 @@ class Regression:
             predictY.append(mu_s.tolist()[0][0])
 
 
-        err = self.countMeanSqureErr(predictY, self.vecY)
+        err = self.countMeanSqureErr(predictY, self.polyy)
         text = "Error=" + str(err)
 
         plt.subplot(324, xlabel="Baysesian")
@@ -182,19 +183,23 @@ class Regression:
         plt.subplot(325, xlabel="Lasso")
         self.plotReg(theta_)
 
-    def countMeanSqureErr(self, resY, trueY):
-        p_y = np.array(resY)
+    def countMeanSqureErr(self, preY, trueY):
+        p_y = np.array(preY)
         t_y = np.array(trueY)
-        err = sum((p_y - t_y) ** 2)
+        err = sum((p_y - t_y) ** 2)/len(preY)
         return err
 
 
+    def adjustTrainingSample(self):
+
+
+
+        return 0
+
 
 reg = Regression()
-
-
-reg.leastSquaresReg()  # least_squares(LS)
-reg.regularizedLSReg()   # regularized LS (RLS)
+reg.leastSquaresReg()  # least_squares(LS)f
+reg.regularizedLSReg()  # regularized LS (RLS)
 reg.robustReg()   # Robust Regression (RR)
 reg.baysesianReg() # Baysesian Regression (BR)
 reg.lassoReg()   # Lasso Regression (Lasso)
