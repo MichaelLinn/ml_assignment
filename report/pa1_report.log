@@ -1,0 +1,2017 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.7)  10 OCT 2017 21:46
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**pa1_report.tex
+(./pa1_report.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/mwe/mwe.sty
+Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count91
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count92
+\c@Blindtext=\count93
+\c@blind@countparstart=\count94
+\blind@countxx=\count95
+\blindtext@numBlindtext=\count96
+\blind@countyy=\count97
+\c@blindlist=\count98
+\c@blindlistlevel=\count99
+\c@blindlist@level=\count100
+\blind@listitem=\count101
+\c@blind@listcount=\count102
+\c@blind@levelcount=\count103
+\blind@mathformula=\count104
+\blind@Mathformula=\count105
+\c@blind@randomcount=\count106
+\c@blind@randommax=\count107
+\c@blind@pangramcount=\count108
+\c@blind@pangrammax=\count109
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen113
+\captionmargin@=\dimen114
+\captionwidth=\dimen115
+\caption@tempdima=\dimen116
+\caption@indent=\dimen117
+\caption@parindent=\dimen118
+\caption@hangindent=\dimen119
+)
+\c@ContinuedFloat=\count110
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count111
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count112
+\c@subtable=\count113
+)
+(./pa1_report.aux
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `default' multiply defined.
+
+
+LaTeX Warning: Label `fig:10order' multiply defined.
+
+
+LaTeX Warning: Label `fig:10order' multiply defined.
+
+
+LaTeX Warning: Label `cp2' multiply defined.
+
+
+LaTeX Warning: Label `fig:cp2p' multiply defined.
+
+)
+\openout1 = `pa1_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen120
+\scratchbox=\box28
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen121
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks20
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package epstopdf Info: Source file: <bayesian_param.eps>
+(epstopdf)                    date: 2017-10-09 22:43:13
+(epstopdf)                    size: 29895 bytes
+(epstopdf)             Output file: <bayesian_param-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-09 22:44:27
+(epstopdf)                    size: 40515 bytes
+(epstopdf)             Command: <repstopdf --outfile=bayesian_param-eps-convert
+ed-to.pdf bayesian_param.eps>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
+
+<bayesian_param-eps-converted-to.pdf, id=1, 462.72874pt x 346.29375pt>
+File: bayesian_param-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bayesian_param-eps-converted-to.pdf>
+Package pdftex.def Info: bayesian_param-eps-converted-to.pdf used on input line
+ 37.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <lasso_param.eps>
+(epstopdf)                    date: 2017-10-09 22:41:59
+(epstopdf)                    size: 28478 bytes
+(epstopdf)             Output file: <lasso_param-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-09 22:44:28
+(epstopdf)                    size: 20798 bytes
+(epstopdf)             Command: <repstopdf --outfile=lasso_param-eps-converted-
+to.pdf lasso_param.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+
+<lasso_param-eps-converted-to.pdf, id=2, 462.72874pt x 346.29375pt>
+File: lasso_param-eps-converted-to.pdf Graphic file (type pdf)
+
+<use lasso_param-eps-converted-to.pdf>
+Package pdftex.def Info: lasso_param-eps-converted-to.pdf used on input line 43
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <ls_param.eps>
+(epstopdf)                    date: 2017-10-09 22:41:59
+(epstopdf)                    size: 28241 bytes
+(epstopdf)             Output file: <ls_param-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-09 22:44:28
+(epstopdf)                    size: 21153 bytes
+(epstopdf)             Command: <repstopdf --outfile=ls_param-eps-converted-to.
+pdf ls_param.eps>
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+<ls_param-eps-converted-to.pdf, id=3, 462.72874pt x 346.29375pt>
+File: ls_param-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ls_param-eps-converted-to.pdf>
+Package pdftex.def Info: ls_param-eps-converted-to.pdf used on input line 49.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./bayes
+ian_param-eps-converted-to.pdf> <./lasso_param-eps-converted-to.pdf> <./ls_para
+m-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <BayessianRegression_5thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:06:02
+(epstopdf)                    size: 50229 bytes
+(epstopdf)             Output file: <BayessianRegression_5thorder-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-10-10 00:36:54
+(epstopdf)                    size: 43390 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayessianRegression_5thord
+er-eps-converted-to.pdf BayessianRegression_5thorder.eps>
+(epstopdf)             \includegraphics on input line 89.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayessianRegression_5thorder-eps-converted-to.pdf, id=133, 462.72874pt x 346.2
+9375pt>
+File: BayessianRegression_5thorder-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use BayessianRegression_5thorder-eps-converted-to.pdf>
+Package pdftex.def Info: BayessianRegression_5thorder-eps-converted-to.pdf used
+ on input line 89.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LassoRegression_5thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:06:02
+(epstopdf)                    size: 35248 bytes
+(epstopdf)             Output file: <LassoRegression_5thorder-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-10-10 00:36:54
+(epstopdf)                    size: 27710 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_5thorder-e
+ps-converted-to.pdf LassoRegression_5thorder.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_5thorder-eps-converted-to.pdf, id=134, 462.72874pt x 346.29375
+pt>
+File: LassoRegression_5thorder-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_5thorder-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_5thorder-eps-converted-to.pdf used on 
+input line 95.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_5thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:06:01
+(epstopdf)                    size: 35590 bytes
+(epstopdf)             Output file: <LeastSquareRegression_5thorder-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2017-10-10 00:36:55
+(epstopdf)                    size: 28441 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_5tho
+rder-eps-converted-to.pdf LeastSquareRegression_5thorder.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_5thorder-eps-converted-to.pdf, id=135, 462.72874pt x 346
+.29375pt>
+File: LeastSquareRegression_5thorder-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use LeastSquareRegression_5thorder-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_5thorder-eps-converted-to.pdf us
+ed on input line 101.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RobustRegression_5thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:06:02
+(epstopdf)                    size: 35956 bytes
+(epstopdf)             Output file: <RobustRegression_5thorder-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-10-10 00:36:55
+(epstopdf)                    size: 28829 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_5thorder-
+eps-converted-to.pdf RobustRegression_5thorder.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_5thorder-eps-converted-to.pdf, id=136, 462.72874pt x 346.2937
+5pt>
+File: RobustRegression_5thorder-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_5thorder-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_5thorder-eps-converted-to.pdf used on
+ input line 107.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_5thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:06:02
+(epstopdf)                    size: 34916 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_5thorder-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 00:36:55
+(epstopdf)                    size: 27622 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_5t
+horder-eps-converted-to.pdf RegularizedLSRegression_5thorder.eps>
+(epstopdf)             \includegraphics on input line 113.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_5thorder-eps-converted-to.pdf, id=137, 462.72874pt x 3
+46.29375pt>
+File: RegularizedLSRegression_5thorder-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use RegularizedLSRegression_5thorder-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_5thorder-eps-converted-to.pdf 
+used on input line 113.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+
+[2 <./BayessianRegression_5thorder-eps-converted-to.pdf> <./LassoRegression_5th
+order-eps-converted-to.pdf> <./LeastSquareRegression_5thorder-eps-converted-to.
+pdf> <./RobustRegression_5thorder-eps-converted-to.pdf> <./RegularizedLSRegress
+ion_5thorder-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <BayesianRegression_outliers15.eps>
+(epstopdf)                    date: 2017-10-10 20:57:27
+(epstopdf)                    size: 50280 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers15-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:24
+(epstopdf)                    size: 38138 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s15-eps-converted-to.pdf BayesianRegression_outliers15.eps>
+(epstopdf)             \includegraphics on input line 129.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers15-eps-converted-to.pdf, id=356, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers15-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers15-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers15-eps-converted-to.pdf use
+d on input line 129.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers25.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 51141 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers25-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:24
+(epstopdf)                    size: 39061 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s25-eps-converted-to.pdf BayesianRegression_outliers25.eps>
+(epstopdf)             \includegraphics on input line 134.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers25-eps-converted-to.pdf, id=357, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers25-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers25-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers25-eps-converted-to.pdf use
+d on input line 134.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers35.eps>
+(epstopdf)                    date: 2017-10-10 20:57:29
+(epstopdf)                    size: 52290 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers35-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:25
+(epstopdf)                    size: 40128 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s35-eps-converted-to.pdf BayesianRegression_outliers35.eps>
+(epstopdf)             \includegraphics on input line 139.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers35-eps-converted-to.pdf, id=358, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers35-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers35-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers35-eps-converted-to.pdf use
+d on input line 139.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers45.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 52018 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers45-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:25
+(epstopdf)                    size: 41455 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s45-eps-converted-to.pdf BayesianRegression_outliers45.eps>
+(epstopdf)             \includegraphics on input line 144.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers45-eps-converted-to.pdf, id=359, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers45-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers45-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers45-eps-converted-to.pdf use
+d on input line 144.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers55.eps>
+(epstopdf)                    date: 2017-10-10 20:57:31
+(epstopdf)                    size: 51413 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers55-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:25
+(epstopdf)                    size: 41793 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s55-eps-converted-to.pdf BayesianRegression_outliers55.eps>
+(epstopdf)             \includegraphics on input line 149.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers55-eps-converted-to.pdf, id=360, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers55-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers55-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers55-eps-converted-to.pdf use
+d on input line 149.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers65.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 52234 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers65-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:26
+(epstopdf)                    size: 42767 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s65-eps-converted-to.pdf BayesianRegression_outliers65.eps>
+(epstopdf)             \includegraphics on input line 154.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers65-eps-converted-to.pdf, id=361, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers65-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers65-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers65-eps-converted-to.pdf use
+d on input line 154.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers75.eps>
+(epstopdf)                    date: 2017-10-10 20:57:33
+(epstopdf)                    size: 51939 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers75-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:26
+(epstopdf)                    size: 43177 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s75-eps-converted-to.pdf BayesianRegression_outliers75.eps>
+(epstopdf)             \includegraphics on input line 159.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers75-eps-converted-to.pdf, id=362, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers75-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers75-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers75-eps-converted-to.pdf use
+d on input line 159.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers85.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 52661 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers85-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:27
+(epstopdf)                    size: 43941 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s85-eps-converted-to.pdf BayesianRegression_outliers85.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers85-eps-converted-to.pdf, id=363, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers85-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers85-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers85-eps-converted-to.pdf use
+d on input line 164.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers95.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 51523 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers95-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:07:27
+(epstopdf)                    size: 43793 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s95-eps-converted-to.pdf BayesianRegression_outliers95.eps>
+(epstopdf)             \includegraphics on input line 169.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers95-eps-converted-to.pdf, id=364, 462.72874pt x 346.
+29375pt>
+File: BayesianRegression_outliers95-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayesianRegression_outliers95-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers95-eps-converted-to.pdf use
+d on input line 169.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers15.eps>
+(epstopdf)                    date: 2017-10-10 20:57:27
+(epstopdf)                    size: 37305 bytes
+(epstopdf)             Output file: <LassoRegression_outliers15-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:53
+(epstopdf)                    size: 23601 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers15
+-eps-converted-to.pdf LassoRegression_outliers15.eps>
+(epstopdf)             \includegraphics on input line 179.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers15-eps-converted-to.pdf, id=365, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers15-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers15-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers15-eps-converted-to.pdf used o
+n input line 179.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers25.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 38325 bytes
+(epstopdf)             Output file: <LassoRegression_outliers25-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:54
+(epstopdf)                    size: 24420 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers25
+-eps-converted-to.pdf LassoRegression_outliers25.eps>
+(epstopdf)             \includegraphics on input line 184.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers25-eps-converted-to.pdf, id=366, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers25-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers25-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers25-eps-converted-to.pdf used o
+n input line 184.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers35.eps>
+(epstopdf)                    date: 2017-10-10 20:57:29
+(epstopdf)                    size: 36686 bytes
+(epstopdf)             Output file: <LassoRegression_outliers35-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:54
+(epstopdf)                    size: 24618 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers35
+-eps-converted-to.pdf LassoRegression_outliers35.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers35-eps-converted-to.pdf, id=367, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers35-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers35-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers35-eps-converted-to.pdf used o
+n input line 189.
+(pdftex.def)             Requested size: 77.39911pt x 57.92331pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers45.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 37284 bytes
+(epstopdf)             Output file: <LassoRegression_outliers45-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:54
+(epstopdf)                    size: 25839 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers45
+-eps-converted-to.pdf LassoRegression_outliers45.eps>
+(epstopdf)             \includegraphics on input line 194.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers45-eps-converted-to.pdf, id=368, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers45-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers45-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers45-eps-converted-to.pdf used o
+n input line 194.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers55.eps>
+(epstopdf)                    date: 2017-10-10 20:57:31
+(epstopdf)                    size: 37458 bytes
+(epstopdf)             Output file: <LassoRegression_outliers55-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:55
+(epstopdf)                    size: 26596 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers55
+-eps-converted-to.pdf LassoRegression_outliers55.eps>
+(epstopdf)             \includegraphics on input line 199.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers55-eps-converted-to.pdf, id=369, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers55-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers55-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers55-eps-converted-to.pdf used o
+n input line 199.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers65.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 38254 bytes
+(epstopdf)             Output file: <LassoRegression_outliers65-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:55
+(epstopdf)                    size: 28451 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers65
+-eps-converted-to.pdf LassoRegression_outliers65.eps>
+(epstopdf)             \includegraphics on input line 204.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers65-eps-converted-to.pdf, id=370, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers65-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers65-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers65-eps-converted-to.pdf used o
+n input line 204.
+(pdftex.def)             Requested size: 77.39911pt x 57.92331pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers75.eps>
+(epstopdf)                    date: 2017-10-10 20:57:33
+(epstopdf)                    size: 38616 bytes
+(epstopdf)             Output file: <LassoRegression_outliers75-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:55
+(epstopdf)                    size: 29128 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers75
+-eps-converted-to.pdf LassoRegression_outliers75.eps>
+(epstopdf)             \includegraphics on input line 209.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers75-eps-converted-to.pdf, id=371, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers75-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers75-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers75-eps-converted-to.pdf used o
+n input line 209.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers85.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 37655 bytes
+(epstopdf)             Output file: <LassoRegression_outliers85-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:56
+(epstopdf)                    size: 28729 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers85
+-eps-converted-to.pdf LassoRegression_outliers85.eps>
+(epstopdf)             \includegraphics on input line 214.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers85-eps-converted-to.pdf, id=372, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers85-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers85-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers85-eps-converted-to.pdf used o
+n input line 214.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers95.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 38218 bytes
+(epstopdf)             Output file: <LassoRegression_outliers95-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 21:14:56
+(epstopdf)                    size: 29589 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers95
+-eps-converted-to.pdf LassoRegression_outliers95.eps>
+(epstopdf)             \includegraphics on input line 219.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers95-eps-converted-to.pdf, id=373, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_outliers95-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers95-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers95-eps-converted-to.pdf used o
+n input line 219.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers15.eps>
+(epstopdf)                    date: 2017-10-10 20:57:27
+(epstopdf)                    size: 37824 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers15-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:25
+(epstopdf)                    size: 23728 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers15-eps-converted-to.pdf LeastSquareRegression_outliers15.eps>
+(epstopdf)             \includegraphics on input line 229.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers15-eps-converted-to.pdf, id=374, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers15-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers15-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers15-eps-converted-to.pdf 
+used on input line 229.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers25.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 37963 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers25-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:26
+(epstopdf)                    size: 24170 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers25-eps-converted-to.pdf LeastSquareRegression_outliers25.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers25-eps-converted-to.pdf, id=375, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers25-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers25-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers25-eps-converted-to.pdf 
+used on input line 234.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers35.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 37062 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers35-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:26
+(epstopdf)                    size: 24950 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers35-eps-converted-to.pdf LeastSquareRegression_outliers35.eps>
+(epstopdf)             \includegraphics on input line 239.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers35-eps-converted-to.pdf, id=376, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers35-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers35-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers35-eps-converted-to.pdf 
+used on input line 239.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers45.eps>
+(epstopdf)                    date: 2017-10-10 20:57:29
+(epstopdf)                    size: 37545 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers45-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:26
+(epstopdf)                    size: 25901 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers45-eps-converted-to.pdf LeastSquareRegression_outliers45.eps>
+(epstopdf)             \includegraphics on input line 244.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers45-eps-converted-to.pdf, id=377, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers45-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers45-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers45-eps-converted-to.pdf 
+used on input line 244.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers55.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 38297 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers55-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:27
+(epstopdf)                    size: 26929 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers55-eps-converted-to.pdf LeastSquareRegression_outliers55.eps>
+(epstopdf)             \includegraphics on input line 249.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers55-eps-converted-to.pdf, id=378, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers55-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers55-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers55-eps-converted-to.pdf 
+used on input line 249.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers65.eps>
+(epstopdf)                    date: 2017-10-10 20:57:31
+(epstopdf)                    size: 38333 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers65-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:27
+(epstopdf)                    size: 27730 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers65-eps-converted-to.pdf LeastSquareRegression_outliers65.eps>
+(epstopdf)             \includegraphics on input line 254.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers65-eps-converted-to.pdf, id=379, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers65-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers65-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers65-eps-converted-to.pdf 
+used on input line 254.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers75.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 38882 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers75-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:27
+(epstopdf)                    size: 29223 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers75-eps-converted-to.pdf LeastSquareRegression_outliers75.eps>
+(epstopdf)             \includegraphics on input line 259.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers75-eps-converted-to.pdf, id=380, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers75-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers75-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers75-eps-converted-to.pdf 
+used on input line 259.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers85.eps>
+(epstopdf)                    date: 2017-10-10 20:57:33
+(epstopdf)                    size: 37950 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers85-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:28
+(epstopdf)                    size: 28785 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers85-eps-converted-to.pdf LeastSquareRegression_outliers85.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers85-eps-converted-to.pdf, id=381, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers85-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers85-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers85-eps-converted-to.pdf 
+used on input line 264.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers95.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 38808 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers95-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:24:28
+(epstopdf)                    size: 30592 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers95-eps-converted-to.pdf LeastSquareRegression_outliers95.eps>
+(epstopdf)             \includegraphics on input line 269.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers95-eps-converted-to.pdf, id=382, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_outliers95-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use LeastSquareRegression_outliers95-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers95-eps-converted-to.pdf 
+used on input line 269.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+
+[3 <./BayesianRegression_outliers15-eps-converted-to.pdf> <./BayesianRegression
+_outliers25-eps-converted-to.pdf> <./BayesianRegression_outliers35-eps-converte
+d-to.pdf> <./BayesianRegression_outliers45-eps-converted-to.pdf> <./BayesianReg
+ression_outliers55-eps-converted-to.pdf> <./BayesianRegression_outliers65-eps-c
+onverted-to.pdf> <./BayesianRegression_outliers75-eps-converted-to.pdf> <./Baye
+sianRegression_outliers85-eps-converted-to.pdf> <./BayesianRegression_outliers9
+5-eps-converted-to.pdf> <./LassoRegression_outliers15-eps-converted-to.pdf> <./
+LassoRegression_outliers25-eps-converted-to.pdf> <./LassoRegression_outliers35-
+eps-converted-to.pdf> <./LassoRegression_outliers45-eps-converted-to.pdf> <./La
+ssoRegression_outliers55-eps-converted-to.pdf> <./LassoRegression_outliers65-ep
+s-converted-to.pdf> <./LassoRegression_outliers75-eps-converted-to.pdf> <./Lass
+oRegression_outliers85-eps-converted-to.pdf> <./LassoRegression_outliers95-eps-
+converted-to.pdf>]
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers15.eps>
+(epstopdf)                    date: 2017-10-10 20:57:27
+(epstopdf)                    size: 37972 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers15-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:29
+(epstopdf)                    size: 24214 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers15-eps-converted-to.pdf RegularizedLSRegression_outliers15.eps>
+(epstopdf)             \includegraphics on input line 280.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers15-eps-converted-to.pdf, id=1264, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers15-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers15-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers15-eps-converted-to.pd
+f used on input line 280.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers25.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 36677 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers25-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:29
+(epstopdf)                    size: 24179 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers25-eps-converted-to.pdf RegularizedLSRegression_outliers25.eps>
+(epstopdf)             \includegraphics on input line 285.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers25-eps-converted-to.pdf, id=1265, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers25-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers25-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers25-eps-converted-to.pd
+f used on input line 285.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers35.eps>
+(epstopdf)                    date: 2017-10-10 20:57:29
+(epstopdf)                    size: 36768 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers35-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:29
+(epstopdf)                    size: 24909 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers35-eps-converted-to.pdf RegularizedLSRegression_outliers35.eps>
+(epstopdf)             \includegraphics on input line 290.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers35-eps-converted-to.pdf, id=1266, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers35-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers35-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers35-eps-converted-to.pd
+f used on input line 290.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers45.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 37364 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers45-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:30
+(epstopdf)                    size: 25928 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers45-eps-converted-to.pdf RegularizedLSRegression_outliers45.eps>
+(epstopdf)             \includegraphics on input line 295.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers45-eps-converted-to.pdf, id=1267, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers45-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers45-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers45-eps-converted-to.pd
+f used on input line 295.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers55.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 38515 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers55-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:30
+(epstopdf)                    size: 27198 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers55-eps-converted-to.pdf RegularizedLSRegression_outliers55.eps>
+(epstopdf)             \includegraphics on input line 300.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers55-eps-converted-to.pdf, id=1268, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers55-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers55-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers55-eps-converted-to.pd
+f used on input line 300.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers65.eps>
+(epstopdf)                    date: 2017-10-10 20:57:31
+(epstopdf)                    size: 38769 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers65-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:31
+(epstopdf)                    size: 28792 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers65-eps-converted-to.pdf RegularizedLSRegression_outliers65.eps>
+(epstopdf)             \includegraphics on input line 305.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers65-eps-converted-to.pdf, id=1269, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers65-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers65-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers65-eps-converted-to.pd
+f used on input line 305.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers75.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 39090 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers75-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:31
+(epstopdf)                    size: 29445 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers75-eps-converted-to.pdf RegularizedLSRegression_outliers75.eps>
+(epstopdf)             \includegraphics on input line 310.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers75-eps-converted-to.pdf, id=1270, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers75-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers75-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers75-eps-converted-to.pd
+f used on input line 310.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers85.eps>
+(epstopdf)                    date: 2017-10-10 20:57:33
+(epstopdf)                    size: 38124 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers85-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:31
+(epstopdf)                    size: 28976 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers85-eps-converted-to.pdf RegularizedLSRegression_outliers85.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers85-eps-converted-to.pdf, id=1271, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers85-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers85-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers85-eps-converted-to.pd
+f used on input line 315.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers95.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 37333 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers95-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 21:28:32
+(epstopdf)                    size: 29328 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers95-eps-converted-to.pdf RegularizedLSRegression_outliers95.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers95-eps-converted-to.pdf, id=1272, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegression_outliers95-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegression_outliers95-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers95-eps-converted-to.pd
+f used on input line 320.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers15.eps>
+(epstopdf)                    date: 2017-10-10 20:57:27
+(epstopdf)                    size: 38911 bytes
+(epstopdf)             Output file: <RobustRegression_outliers15-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:48
+(epstopdf)                    size: 24705 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers1
+5-eps-converted-to.pdf RobustRegression_outliers15.eps>
+(epstopdf)             \includegraphics on input line 332.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers15-eps-converted-to.pdf, id=1273, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers15-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers15-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers15-eps-converted-to.pdf used 
+on input line 332.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers25.eps>
+(epstopdf)                    date: 2017-10-10 20:57:28
+(epstopdf)                    size: 37424 bytes
+(epstopdf)             Output file: <RobustRegression_outliers25-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:48
+(epstopdf)                    size: 24624 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers2
+5-eps-converted-to.pdf RobustRegression_outliers25.eps>
+(epstopdf)             \includegraphics on input line 337.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers25-eps-converted-to.pdf, id=1274, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers25-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers25-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers25-eps-converted-to.pdf used 
+on input line 337.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers35.eps>
+(epstopdf)                    date: 2017-10-10 20:57:29
+(epstopdf)                    size: 37475 bytes
+(epstopdf)             Output file: <RobustRegression_outliers35-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:49
+(epstopdf)                    size: 26042 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers3
+5-eps-converted-to.pdf RobustRegression_outliers35.eps>
+(epstopdf)             \includegraphics on input line 342.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers35-eps-converted-to.pdf, id=1275, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers35-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers35-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers35-eps-converted-to.pdf used 
+on input line 342.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers45.eps>
+(epstopdf)                    date: 2017-10-10 20:57:30
+(epstopdf)                    size: 37806 bytes
+(epstopdf)             Output file: <RobustRegression_outliers45-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:49
+(epstopdf)                    size: 26791 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers4
+5-eps-converted-to.pdf RobustRegression_outliers45.eps>
+(epstopdf)             \includegraphics on input line 347.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers45-eps-converted-to.pdf, id=1276, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers45-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers45-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers45-eps-converted-to.pdf used 
+on input line 347.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers55.eps>
+(epstopdf)                    date: 2017-10-10 20:57:31
+(epstopdf)                    size: 37684 bytes
+(epstopdf)             Output file: <RobustRegression_outliers55-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:50
+(epstopdf)                    size: 26768 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers5
+5-eps-converted-to.pdf RobustRegression_outliers55.eps>
+(epstopdf)             \includegraphics on input line 352.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers55-eps-converted-to.pdf, id=1277, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers55-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers55-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers55-eps-converted-to.pdf used 
+on input line 352.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers65.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 38015 bytes
+(epstopdf)             Output file: <RobustRegression_outliers65-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:50
+(epstopdf)                    size: 27692 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers6
+5-eps-converted-to.pdf RobustRegression_outliers65.eps>
+(epstopdf)             \includegraphics on input line 357.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers65-eps-converted-to.pdf, id=1278, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers65-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers65-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers65-eps-converted-to.pdf used 
+on input line 357.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers75.eps>
+(epstopdf)                    date: 2017-10-10 20:57:32
+(epstopdf)                    size: 38911 bytes
+(epstopdf)             Output file: <RobustRegression_outliers75-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:50
+(epstopdf)                    size: 29086 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers7
+5-eps-converted-to.pdf RobustRegression_outliers75.eps>
+(epstopdf)             \includegraphics on input line 362.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers75-eps-converted-to.pdf, id=1279, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers75-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers75-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers75-eps-converted-to.pdf used 
+on input line 362.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers85.eps>
+(epstopdf)                    date: 2017-10-10 20:57:33
+(epstopdf)                    size: 38059 bytes
+(epstopdf)             Output file: <RobustRegression_outliers85-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:51
+(epstopdf)                    size: 28884 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers8
+5-eps-converted-to.pdf RobustRegression_outliers85.eps>
+(epstopdf)             \includegraphics on input line 367.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers85-eps-converted-to.pdf, id=1280, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers85-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers85-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers85-eps-converted-to.pdf used 
+on input line 367.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <RobustRegression_outliers95.eps>
+(epstopdf)                    date: 2017-10-10 20:57:34
+(epstopdf)                    size: 39161 bytes
+(epstopdf)             Output file: <RobustRegression_outliers95-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 21:32:51
+(epstopdf)                    size: 30494 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers9
+5-eps-converted-to.pdf RobustRegression_outliers95.eps>
+(epstopdf)             \includegraphics on input line 372.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers95-eps-converted-to.pdf, id=1281, 462.72874pt x 346.2
+9375pt>
+File: RobustRegression_outliers95-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers95-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers95-eps-converted-to.pdf used 
+on input line 372.
+(pdftex.def)             Requested size: 69.65742pt x 52.12675pt.
+Package epstopdf Info: Source file: <BayessianRegressionsubseterror.eps>
+(epstopdf)                    date: 2017-10-09 20:34:12
+(epstopdf)                    size: 21841 bytes
+(epstopdf)             Output file: <BayessianRegressionsubseterror-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2017-10-10 10:10:46
+(epstopdf)                    size: 14054 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayessianRegressionsubsete
+rror-eps-converted-to.pdf BayessianRegressionsubseterror.eps>
+(epstopdf)             \includegraphics on input line 385.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayessianRegressionsubseterror-eps-converted-to.pdf, id=1282, 462.72874pt x 34
+6.29375pt>
+File: BayessianRegressionsubseterror-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use BayessianRegressionsubseterror-eps-converted-to.pdf>
+Package pdftex.def Info: BayessianRegressionsubseterror-eps-converted-to.pdf us
+ed on input line 385.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LassoRegressionsubseterror.eps>
+(epstopdf)                    date: 2017-10-09 20:34:12
+(epstopdf)                    size: 20928 bytes
+(epstopdf)             Output file: <LassoRegressionsubseterror-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 10:10:47
+(epstopdf)                    size: 13546 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegressionsubseterror
+-eps-converted-to.pdf LassoRegressionsubseterror.eps>
+(epstopdf)             \includegraphics on input line 390.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegressionsubseterror-eps-converted-to.pdf, id=1283, 462.72874pt x 346.29
+375pt>
+File: LassoRegressionsubseterror-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegressionsubseterror-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegressionsubseterror-eps-converted-to.pdf used o
+n input line 390.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RegularizedLSRegressionsubseterror.eps>
+(epstopdf)                    date: 2017-10-09 20:34:12
+(epstopdf)                    size: 21873 bytes
+(epstopdf)             Output file: <RegularizedLSRegressionsubseterror-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-10-10 10:11:29
+(epstopdf)                    size: 14140 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegressionsub
+seterror-eps-converted-to.pdf RegularizedLSRegressionsubseterror.eps>
+(epstopdf)             \includegraphics on input line 395.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegressionsubseterror-eps-converted-to.pdf, id=1284, 462.72874pt 
+x 346.29375pt>
+File: RegularizedLSRegressionsubseterror-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use RegularizedLSRegressionsubseterror-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegressionsubseterror-eps-converted-to.pd
+f used on input line 395.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LeastSquaresRegressionsubseterror.eps>
+(epstopdf)                    date: 2017-10-09 20:34:12
+(epstopdf)                    size: 20933 bytes
+(epstopdf)             Output file: <LeastSquaresRegressionsubseterror-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-10-10 10:11:28
+(epstopdf)                    size: 13366 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquaresRegressionsubs
+eterror-eps-converted-to.pdf LeastSquaresRegressionsubseterror.eps>
+(epstopdf)             \includegraphics on input line 400.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquaresRegressionsubseterror-eps-converted-to.pdf, id=1285, 462.72874pt x
+ 346.29375pt>
+File: LeastSquaresRegressionsubseterror-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use LeastSquaresRegressionsubseterror-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquaresRegressionsubseterror-eps-converted-to.pdf
+ used on input line 400.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RobustRegressionsubseterror.eps>
+(epstopdf)                    date: 2017-10-09 20:34:12
+(epstopdf)                    size: 23179 bytes
+(epstopdf)             Output file: <RobustRegressionsubseterror-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 10:11:28
+(epstopdf)                    size: 14445 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegressionsubseterro
+r-eps-converted-to.pdf RobustRegressionsubseterror.eps>
+(epstopdf)             \includegraphics on input line 405.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegressionsubseterror-eps-converted-to.pdf, id=1286, 462.72874pt x 346.2
+9375pt>
+File: RobustRegressionsubseterror-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegressionsubseterror-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegressionsubseterror-eps-converted-to.pdf used 
+on input line 405.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [4 <./LeastSquareRegression_outliers15-eps-converted-to.pdf> <./LeastSquareReg
+ression_outliers25-eps-converted-to.pdf> <./LeastSquareRegression_outliers35-ep
+s-converted-to.pdf> <./LeastSquareRegression_outliers45-eps-converted-to.pdf> <
+./LeastSquareRegression_outliers55-eps-converted-to.pdf> <./LeastSquareRegressi
+on_outliers65-eps-converted-to.pdf> <./LeastSquareRegression_outliers75-eps-con
+verted-to.pdf> <./LeastSquareRegression_outliers85-eps-converted-to.pdf> <./Lea
+stSquareRegression_outliers95-eps-converted-to.pdf> <./RegularizedLSRegression_
+outliers15-eps-converted-to.pdf> <./RegularizedLSRegression_outliers25-eps-conv
+erted-to.pdf> <./RegularizedLSRegression_outliers35-eps-converted-to.pdf> <./Re
+gularizedLSRegression_outliers45-eps-converted-to.pdf> <./RegularizedLSRegressi
+on_outliers55-eps-converted-to.pdf> <./RegularizedLSRegression_outliers65-eps-c
+onverted-to.pdf> <./RegularizedLSRegression_outliers75-eps-converted-to.pdf> <.
+/RegularizedLSRegression_outliers85-eps-converted-to.pdf> <./RegularizedLSRegre
+ssion_outliers95-eps-converted-to.pdf> <./RobustRegression_outliers15-eps-conve
+rted-to.pdf> <./RobustRegression_outliers25-eps-converted-to.pdf> <./RobustRegr
+ession_outliers35-eps-converted-to.pdf> <./RobustRegression_outliers45-eps-conv
+erted-to.pdf> <./RobustRegression_outliers55-eps-converted-to.pdf> <./RobustReg
+ression_outliers65-eps-converted-to.pdf> <./RobustRegression_outliers75-eps-con
+verted-to.pdf> <./RobustRegression_outliers85-eps-converted-to.pdf> <./RobustRe
+gression_outliers95-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <RobustRegression_outliers.eps>
+(epstopdf)                    date: 2017-10-09 20:11:30
+(epstopdf)                    size: 35356 bytes
+(epstopdf)             Output file: <RobustRegression_outliers-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-10-10 10:35:00
+(epstopdf)                    size: 28023 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_outliers-
+eps-converted-to.pdf RobustRegression_outliers.eps>
+(epstopdf)             \includegraphics on input line 440.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_outliers-eps-converted-to.pdf, id=2585, 462.72874pt x 346.293
+75pt>
+File: RobustRegression_outliers-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_outliers-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_outliers-eps-converted-to.pdf used on
+ input line 440.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <BayesianRegression_outliers.eps>
+(epstopdf)                    date: 2017-10-09 20:11:30
+(epstopdf)                    size: 50107 bytes
+(epstopdf)             Output file: <BayesianRegression_outliers-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-10-10 10:34:40
+(epstopdf)                    size: 42923 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayesianRegression_outlier
+s-eps-converted-to.pdf BayesianRegression_outliers.eps>
+(epstopdf)             \includegraphics on input line 445.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayesianRegression_outliers-eps-converted-to.pdf, id=2586, 462.72874pt x 346.2
+9375pt>
+File: BayesianRegression_outliers-eps-converted-to.pdf Graphic file (type pdf)
+ <use BayesianRegression_outliers-eps-converted-to.pdf>
+Package pdftex.def Info: BayesianRegression_outliers-eps-converted-to.pdf used 
+on input line 445.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LassoRegression_outliers.eps>
+(epstopdf)                    date: 2017-10-09 20:11:30
+(epstopdf)                    size: 36818 bytes
+(epstopdf)             Output file: <LassoRegression_outliers-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-10-10 10:34:40
+(epstopdf)                    size: 28905 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_outliers-e
+ps-converted-to.pdf LassoRegression_outliers.eps>
+(epstopdf)             \includegraphics on input line 450.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_outliers-eps-converted-to.pdf, id=2587, 462.72874pt x 346.2937
+5pt>
+File: LassoRegression_outliers-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_outliers-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_outliers-eps-converted-to.pdf used on 
+input line 450.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_outliers.eps>
+(epstopdf)                    date: 2017-10-09 20:11:30
+(epstopdf)                    size: 35737 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_outliers-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-10-10 10:34:40
+(epstopdf)                    size: 27644 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_ou
+tliers-eps-converted-to.pdf RegularizedLSRegression_outliers.eps>
+(epstopdf)             \includegraphics on input line 455.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_outliers-eps-converted-to.pdf, id=2588, 462.72874pt x 
+346.29375pt>
+File: RegularizedLSRegression_outliers-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use RegularizedLSRegression_outliers-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_outliers-eps-converted-to.pdf 
+used on input line 455.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_outliers.eps>
+(epstopdf)                    date: 2017-10-09 20:11:30
+(epstopdf)                    size: 35432 bytes
+(epstopdf)             Output file: <LeastSquareRegression_outliers-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2017-10-10 10:35:00
+(epstopdf)                    size: 27906 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_outl
+iers-eps-converted-to.pdf LeastSquareRegression_outliers.eps>
+(epstopdf)             \includegraphics on input line 460.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_outliers-eps-converted-to.pdf, id=2589, 462.72874pt x 34
+6.29375pt>
+File: LeastSquareRegression_outliers-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use LeastSquareRegression_outliers-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_outliers-eps-converted-to.pdf us
+ed on input line 460.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [5 <./BayessianRegressionsubseterror-eps-converted-to.pdf> <./LassoRegressions
+ubseterror-eps-converted-to.pdf> <./RegularizedLSRegressionsubseterror-eps-conv
+erted-to.pdf> <./LeastSquaresRegressionsubseterror-eps-converted-to.pdf> <./Rob
+ustRegressionsubseterror-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <BayessianRegression_10thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:07:05
+(epstopdf)                    size: 50588 bytes
+(epstopdf)             Output file: <BayessianRegression_10thorder-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-10 11:05:28
+(epstopdf)                    size: 42941 bytes
+(epstopdf)             Command: <repstopdf --outfile=BayessianRegression_10thor
+der-eps-converted-to.pdf BayessianRegression_10thorder.eps>
+(epstopdf)             \includegraphics on input line 496.
+Package epstopdf Info: Output file is already uptodate.
+
+<BayessianRegression_10thorder-eps-converted-to.pdf, id=2748, 462.72874pt x 346
+.29375pt>
+File: BayessianRegression_10thorder-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use BayessianRegression_10thorder-eps-converted-to.pdf>
+Package pdftex.def Info: BayessianRegression_10thorder-eps-converted-to.pdf use
+d on input line 496.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LassoRegression_10thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:07:05
+(epstopdf)                    size: 36276 bytes
+(epstopdf)             Output file: <LassoRegression_10thorder-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-10-10 11:05:29
+(epstopdf)                    size: 28440 bytes
+(epstopdf)             Command: <repstopdf --outfile=LassoRegression_10thorder-
+eps-converted-to.pdf LassoRegression_10thorder.eps>
+(epstopdf)             \includegraphics on input line 501.
+Package epstopdf Info: Output file is already uptodate.
+
+<LassoRegression_10thorder-eps-converted-to.pdf, id=2749, 462.72874pt x 346.293
+75pt>
+File: LassoRegression_10thorder-eps-converted-to.pdf Graphic file (type pdf)
+ <use LassoRegression_10thorder-eps-converted-to.pdf>
+Package pdftex.def Info: LassoRegression_10thorder-eps-converted-to.pdf used on
+ input line 501.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RegularizedLSRegression_10thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:07:04
+(epstopdf)                    size: 36440 bytes
+(epstopdf)             Output file: <RegularizedLSRegression_10thorder-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-10-10 11:05:29
+(epstopdf)                    size: 27993 bytes
+(epstopdf)             Command: <repstopdf --outfile=RegularizedLSRegression_10
+thorder-eps-converted-to.pdf RegularizedLSRegression_10thorder.eps>
+(epstopdf)             \includegraphics on input line 506.
+Package epstopdf Info: Output file is already uptodate.
+
+<RegularizedLSRegression_10thorder-eps-converted-to.pdf, id=2750, 462.72874pt x
+ 346.29375pt>
+File: RegularizedLSRegression_10thorder-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use RegularizedLSRegression_10thorder-eps-converted-to.pdf>
+Package pdftex.def Info: RegularizedLSRegression_10thorder-eps-converted-to.pdf
+ used on input line 506.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <RobustRegression_10thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:07:05
+(epstopdf)                    size: 36099 bytes
+(epstopdf)             Output file: <RobustRegression_10thorder-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-10-10 11:05:18
+(epstopdf)                    size: 28880 bytes
+(epstopdf)             Command: <repstopdf --outfile=RobustRegression_10thorder
+-eps-converted-to.pdf RobustRegression_10thorder.eps>
+(epstopdf)             \includegraphics on input line 511.
+Package epstopdf Info: Output file is already uptodate.
+
+<RobustRegression_10thorder-eps-converted-to.pdf, id=2751, 462.72874pt x 346.29
+375pt>
+File: RobustRegression_10thorder-eps-converted-to.pdf Graphic file (type pdf)
+ <use RobustRegression_10thorder-eps-converted-to.pdf>
+Package pdftex.def Info: RobustRegression_10thorder-eps-converted-to.pdf used o
+n input line 511.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <LeastSquareRegression_10thorder.eps>
+(epstopdf)                    date: 2017-10-09 20:07:04
+(epstopdf)                    size: 37275 bytes
+(epstopdf)             Output file: <LeastSquareRegression_10thorder-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-10-10 11:05:29
+(epstopdf)                    size: 29006 bytes
+(epstopdf)             Command: <repstopdf --outfile=LeastSquareRegression_10th
+order-eps-converted-to.pdf LeastSquareRegression_10thorder.eps>
+(epstopdf)             \includegraphics on input line 516.
+Package epstopdf Info: Output file is already uptodate.
+
+<LeastSquareRegression_10thorder-eps-converted-to.pdf, id=2752, 462.72874pt x 3
+46.29375pt>
+File: LeastSquareRegression_10thorder-eps-converted-to.pdf Graphic file (type p
+df)
+ <use LeastSquareRegression_10thorder-eps-converted-to.pdf>
+Package pdftex.def Info: LeastSquareRegression_10thorder-eps-converted-to.pdf u
+sed on input line 516.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [6 <./RobustRegression_outliers-eps-converted-to.pdf> <./BayesianRegression_ou
+tliers-eps-converted-to.pdf> <./LassoRegression_outliers-eps-converted-to.pdf> 
+<./RegularizedLSRegression_outliers-eps-converted-to.pdf> <./LeastSquareRegress
+ion_outliers-eps-converted-to.pdf>]
+Overfull \hbox (7.40494pt too wide) in paragraph at lines 534--535
+\T1/cmr/m/n/10.95 Reg-u-lar-ized LS Re-gres-sion works the best with the low-es
+t mean-absolute er-ror (MAE=1.2794)
+ []
+
+[7 <./BayessianRegression_10thorder-eps-converted-to.pdf> <./LassoRegression_10
+thorder-eps-converted-to.pdf> <./RegularizedLSRegression_10thorder-eps-converte
+d-to.pdf> <./RobustRegression_10thorder-eps-converted-to.pdf> <./LeastSquareReg
+ression_10thorder-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <bayessian_cp_1phi.eps>
+(epstopdf)                    date: 2017-10-09 20:31:32
+(epstopdf)                    size: 51047 bytes
+(epstopdf)             Output file: <bayessian_cp_1phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:09:30
+(epstopdf)                    size: 103972 bytes
+(epstopdf)             Command: <repstopdf --outfile=bayessian_cp_1phi-eps-conv
+erted-to.pdf bayessian_cp_1phi.eps>
+(epstopdf)             \includegraphics on input line 561.
+Package epstopdf Info: Output file is already uptodate.
+
+<bayessian_cp_1phi-eps-converted-to.pdf, id=3192, 462.72874pt x 346.29375pt>
+File: bayessian_cp_1phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bayessian_cp_1phi-eps-converted-to.pdf>
+Package pdftex.def Info: bayessian_cp_1phi-eps-converted-to.pdf used on input l
+ine 561.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <lasso_cp_1phi.eps>
+(epstopdf)                    date: 2017-10-09 20:31:32
+(epstopdf)                    size: 50788 bytes
+(epstopdf)             Output file: <lasso_cp_1phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:09:30
+(epstopdf)                    size: 103842 bytes
+(epstopdf)             Command: <repstopdf --outfile=lasso_cp_1phi-eps-converte
+d-to.pdf lasso_cp_1phi.eps>
+(epstopdf)             \includegraphics on input line 566.
+Package epstopdf Info: Output file is already uptodate.
+
+<lasso_cp_1phi-eps-converted-to.pdf, id=3193, 462.72874pt x 346.29375pt>
+File: lasso_cp_1phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use lasso_cp_1phi-eps-converted-to.pdf>
+Package pdftex.def Info: lasso_cp_1phi-eps-converted-to.pdf used on input line 
+566.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rls_cp_1phi.eps>
+(epstopdf)                    date: 2017-10-09 20:31:31
+(epstopdf)                    size: 52295 bytes
+(epstopdf)             Output file: <rls_cp_1phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:09:31
+(epstopdf)                    size: 104690 bytes
+(epstopdf)             Command: <repstopdf --outfile=rls_cp_1phi-eps-converted-
+to.pdf rls_cp_1phi.eps>
+(epstopdf)             \includegraphics on input line 571.
+Package epstopdf Info: Output file is already uptodate.
+
+<rls_cp_1phi-eps-converted-to.pdf, id=3194, 462.72874pt x 346.29375pt>
+File: rls_cp_1phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rls_cp_1phi-eps-converted-to.pdf>
+Package pdftex.def Info: rls_cp_1phi-eps-converted-to.pdf used on input line 57
+1.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rr_cp_1phi.eps>
+(epstopdf)                    date: 2017-10-09 20:31:31
+(epstopdf)                    size: 51302 bytes
+(epstopdf)             Output file: <rr_cp_1phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:09:29
+(epstopdf)                    size: 104083 bytes
+(epstopdf)             Command: <repstopdf --outfile=rr_cp_1phi-eps-converted-t
+o.pdf rr_cp_1phi.eps>
+(epstopdf)             \includegraphics on input line 576.
+Package epstopdf Info: Output file is already uptodate.
+
+<rr_cp_1phi-eps-converted-to.pdf, id=3195, 462.72874pt x 346.29375pt>
+File: rr_cp_1phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rr_cp_1phi-eps-converted-to.pdf>
+Package pdftex.def Info: rr_cp_1phi-eps-converted-to.pdf used on input line 576
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <ls_cp_1phi.eps>
+(epstopdf)                    date: 2017-10-09 20:31:31
+(epstopdf)                    size: 50792 bytes
+(epstopdf)             Output file: <ls_cp_1phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:09:49
+(epstopdf)                    size: 103651 bytes
+(epstopdf)             Command: <repstopdf --outfile=ls_cp_1phi-eps-converted-t
+o.pdf ls_cp_1phi.eps>
+(epstopdf)             \includegraphics on input line 581.
+Package epstopdf Info: Output file is already uptodate.
+
+<ls_cp_1phi-eps-converted-to.pdf, id=3196, 462.72874pt x 346.29375pt>
+File: ls_cp_1phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ls_cp_1phi-eps-converted-to.pdf>
+Package pdftex.def Info: ls_cp_1phi-eps-converted-to.pdf used on input line 581
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [8 <./bayessian_cp_1phi-eps-converted-to.pdf> <./lasso_cp_1phi-eps-converted-t
+o.pdf> <./rls_cp_1phi-eps-converted-to.pdf> <./rr_cp_1phi-eps-converted-to.pdf>
+ <./ls_cp_1phi-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <bayessian_cp_2phi.eps>
+(epstopdf)                    date: 2017-10-09 20:27:00
+(epstopdf)                    size: 52080 bytes
+(epstopdf)             Output file: <bayessian_cp_2phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:27:47
+(epstopdf)                    size: 104880 bytes
+(epstopdf)             Command: <repstopdf --outfile=bayessian_cp_2phi-eps-conv
+erted-to.pdf bayessian_cp_2phi.eps>
+(epstopdf)             \includegraphics on input line 617.
+Package epstopdf Info: Output file is already uptodate.
+
+<bayessian_cp_2phi-eps-converted-to.pdf, id=3456, 462.72874pt x 346.29375pt>
+File: bayessian_cp_2phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bayessian_cp_2phi-eps-converted-to.pdf>
+Package pdftex.def Info: bayessian_cp_2phi-eps-converted-to.pdf used on input l
+ine 617.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <lasso_cp_2phi.eps>
+(epstopdf)                    date: 2017-10-09 20:27:00
+(epstopdf)                    size: 51323 bytes
+(epstopdf)             Output file: <lasso_cp_2phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:27:48
+(epstopdf)                    size: 105201 bytes
+(epstopdf)             Command: <repstopdf --outfile=lasso_cp_2phi-eps-converte
+d-to.pdf lasso_cp_2phi.eps>
+(epstopdf)             \includegraphics on input line 622.
+Package epstopdf Info: Output file is already uptodate.
+
+<lasso_cp_2phi-eps-converted-to.pdf, id=3457, 462.72874pt x 346.29375pt>
+File: lasso_cp_2phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use lasso_cp_2phi-eps-converted-to.pdf>
+Package pdftex.def Info: lasso_cp_2phi-eps-converted-to.pdf used on input line 
+622.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rls_cp_2phi.eps>
+(epstopdf)                    date: 2017-10-09 20:27:00
+(epstopdf)                    size: 52626 bytes
+(epstopdf)             Output file: <rls_cp_2phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:27:49
+(epstopdf)                    size: 105994 bytes
+(epstopdf)             Command: <repstopdf --outfile=rls_cp_2phi-eps-converted-
+to.pdf rls_cp_2phi.eps>
+(epstopdf)             \includegraphics on input line 627.
+Package epstopdf Info: Output file is already uptodate.
+
+<rls_cp_2phi-eps-converted-to.pdf, id=3458, 462.72874pt x 346.29375pt>
+File: rls_cp_2phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rls_cp_2phi-eps-converted-to.pdf>
+Package pdftex.def Info: rls_cp_2phi-eps-converted-to.pdf used on input line 62
+7.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rr_cp_2phi.eps>
+(epstopdf)                    date: 2017-10-09 20:27:00
+(epstopdf)                    size: 51816 bytes
+(epstopdf)             Output file: <rr_cp_2phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:27:48
+(epstopdf)                    size: 105196 bytes
+(epstopdf)             Command: <repstopdf --outfile=rr_cp_2phi-eps-converted-t
+o.pdf rr_cp_2phi.eps>
+(epstopdf)             \includegraphics on input line 632.
+Package epstopdf Info: Output file is already uptodate.
+
+<rr_cp_2phi-eps-converted-to.pdf, id=3459, 462.72874pt x 346.29375pt>
+File: rr_cp_2phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rr_cp_2phi-eps-converted-to.pdf>
+Package pdftex.def Info: rr_cp_2phi-eps-converted-to.pdf used on input line 632
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <ls_cp_2phi.eps>
+(epstopdf)                    date: 2017-10-09 20:27:00
+(epstopdf)                    size: 51190 bytes
+(epstopdf)             Output file: <ls_cp_2phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 12:27:49
+(epstopdf)                    size: 104640 bytes
+(epstopdf)             Command: <repstopdf --outfile=ls_cp_2phi-eps-converted-t
+o.pdf ls_cp_2phi.eps>
+(epstopdf)             \includegraphics on input line 637.
+Package epstopdf Info: Output file is already uptodate.
+
+<ls_cp_2phi-eps-converted-to.pdf, id=3460, 462.72874pt x 346.29375pt>
+File: ls_cp_2phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ls_cp_2phi-eps-converted-to.pdf>
+Package pdftex.def Info: ls_cp_2phi-eps-converted-to.pdf used on input line 637
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <bayessian_cp_3phi.eps>
+(epstopdf)                    date: 2017-10-09 20:20:12
+(epstopdf)                    size: 51535 bytes
+(epstopdf)             Output file: <bayessian_cp_3phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 13:26:17
+(epstopdf)                    size: 104429 bytes
+(epstopdf)             Command: <repstopdf --outfile=bayessian_cp_3phi-eps-conv
+erted-to.pdf bayessian_cp_3phi.eps>
+(epstopdf)             \includegraphics on input line 668.
+Package epstopdf Info: Output file is already uptodate.
+
+<bayessian_cp_3phi-eps-converted-to.pdf, id=3461, 462.72874pt x 346.29375pt>
+File: bayessian_cp_3phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use bayessian_cp_3phi-eps-converted-to.pdf>
+Package pdftex.def Info: bayessian_cp_3phi-eps-converted-to.pdf used on input l
+ine 668.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <lasso_cp_3phi.eps>
+(epstopdf)                    date: 2017-10-09 20:20:11
+(epstopdf)                    size: 51906 bytes
+(epstopdf)             Output file: <lasso_cp_3phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 13:26:18
+(epstopdf)                    size: 105354 bytes
+(epstopdf)             Command: <repstopdf --outfile=lasso_cp_3phi-eps-converte
+d-to.pdf lasso_cp_3phi.eps>
+(epstopdf)             \includegraphics on input line 673.
+Package epstopdf Info: Output file is already uptodate.
+
+<lasso_cp_3phi-eps-converted-to.pdf, id=3462, 462.72874pt x 346.29375pt>
+File: lasso_cp_3phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use lasso_cp_3phi-eps-converted-to.pdf>
+Package pdftex.def Info: lasso_cp_3phi-eps-converted-to.pdf used on input line 
+673.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rls_cp_3phi.eps>
+(epstopdf)                    date: 2017-10-09 20:20:11
+(epstopdf)                    size: 52001 bytes
+(epstopdf)             Output file: <rls_cp_3phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 13:26:18
+(epstopdf)                    size: 104644 bytes
+(epstopdf)             Command: <repstopdf --outfile=rls_cp_3phi-eps-converted-
+to.pdf rls_cp_3phi.eps>
+(epstopdf)             \includegraphics on input line 678.
+Package epstopdf Info: Output file is already uptodate.
+
+<rls_cp_3phi-eps-converted-to.pdf, id=3463, 462.72874pt x 346.29375pt>
+File: rls_cp_3phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rls_cp_3phi-eps-converted-to.pdf>
+Package pdftex.def Info: rls_cp_3phi-eps-converted-to.pdf used on input line 67
+8.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <rr_cp_3phi.eps>
+(epstopdf)                    date: 2017-10-09 20:20:11
+(epstopdf)                    size: 51657 bytes
+(epstopdf)             Output file: <rr_cp_3phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 13:26:18
+(epstopdf)                    size: 104151 bytes
+(epstopdf)             Command: <repstopdf --outfile=rr_cp_3phi-eps-converted-t
+o.pdf rr_cp_3phi.eps>
+(epstopdf)             \includegraphics on input line 683.
+Package epstopdf Info: Output file is already uptodate.
+
+<rr_cp_3phi-eps-converted-to.pdf, id=3464, 462.72874pt x 346.29375pt>
+File: rr_cp_3phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rr_cp_3phi-eps-converted-to.pdf>
+Package pdftex.def Info: rr_cp_3phi-eps-converted-to.pdf used on input line 683
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+Package epstopdf Info: Source file: <ls_cp_3phi.eps>
+(epstopdf)                    date: 2017-10-09 20:20:11
+(epstopdf)                    size: 52395 bytes
+(epstopdf)             Output file: <ls_cp_3phi-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-10 13:26:19
+(epstopdf)                    size: 105783 bytes
+(epstopdf)             Command: <repstopdf --outfile=ls_cp_3phi-eps-converted-t
+o.pdf ls_cp_3phi.eps>
+(epstopdf)             \includegraphics on input line 688.
+Package epstopdf Info: Output file is already uptodate.
+
+<ls_cp_3phi-eps-converted-to.pdf, id=3465, 462.72874pt x 346.29375pt>
+File: ls_cp_3phi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ls_cp_3phi-eps-converted-to.pdf>
+Package pdftex.def Info: ls_cp_3phi-eps-converted-to.pdf used on input line 688
+.
+(pdftex.def)             Requested size: 116.10162pt x 86.88498pt.
+ [9 <./bayessian_cp_2phi-eps-converted-to.pdf> <./lasso_cp_2phi-eps-converted-t
+o.pdf> <./rls_cp_2phi-eps-converted-to.pdf> <./rr_cp_2phi-eps-converted-to.pdf>
+ <./ls_cp_2phi-eps-converted-to.pdf>]
+[10 <./bayessian_cp_3phi-eps-converted-to.pdf> <./lasso_cp_3phi-eps-converted-t
+o.pdf> <./rls_cp_3phi-eps-converted-to.pdf> <./rr_cp_3phi-eps-converted-to.pdf>
+ <./ls_cp_3phi-eps-converted-to.pdf>] (./pa1_report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4477 strings out of 492995
+ 79819 string characters out of 6132704
+ 231385 words of memory out of 5000000
+ 7888 multiletter control sequences out of 15000+600000
+ 16688 words of font info for 47 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,8n,39p,641b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on pa1_report.pdf (10 pages, 3397137 bytes).
+PDF statistics:
+ 4058 PDF objects out of 4296 (max. 8388607)
+ 601 compressed objects within 7 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -18,7 +18,6 @@ class Regression:
     ls_error =[]
 
     def __init__(self):
-        plt.figure(1)
         self.load_dataMat()
 
     def load_dataMat(self):
@@ -44,7 +43,7 @@ class Regression:
         return theta_LS
 
     # regularized LS (RLS)
-    def regularizedLSReg(self, lambda_=0.1, matPhi=None):
+    def regularizedLSReg(self, lambda_=0.5, matPhi=None):
         # lambda_ = 0.1
         if matPhi is None:
             matPhi = self.genPhi()
@@ -56,28 +55,55 @@ class Regression:
         return theta_RLS
 
 
-    def plotReg(self, theta_):
+    def plotReg(self, theta_, name, mu_theta=None, sigma_theta=None, idx=""):
 
         testX = np.linspace(-2.0, 2.0, 200, endpoint=True)
+        fig = plt.figure()
 
-        theta_ = np.array(theta_[::-1])  # reverse
-        theta_ = theta_.flatten()     # change ND array into 1D array
-        p = np.poly1d(theta_)
-        resY = p(testX)
+        if name == "Bayesian Regression":
+            predictY, deviation = self.predict_bayes(mu_theta, sigma_theta, self.polyx)
+            resY, _ = self.predict_bayes(mu_theta, sigma_theta, testX)
+            predictY = np.array(predictY).flatten()
+            plt.errorbar(self.polyx, predictY, yerr=deviation, ecolor="red", label="Predicted Point", fmt="-o", ms=2, c="black", mfc="green")
+            l = "lower left"
 
-        predictY = p(self.polyx)
+        else:
+            theta_ = np.array(theta_[::-1])  # reverse
+            theta_ = theta_.flatten()     # change ND array into 1D array
+            p = np.poly1d(theta_)
+            resY = p(testX)
+            predictY = p(self.polyx)
+            plt.scatter(self.polyx, predictY, marker="s", c="g", s=3, label="Predicted Point")
+            l = "upper right"
 
-        error = self.countErr(predictY, self.polyy)
-        text = "Error=" + str(error)
-        plt.text(-0.5, 25, text)
+        error, _ = self.countErr(predictY, self.polyy)
+        text = "MeanSquareError=" + str(error)
 
-        plt.plot(testX, resY, label="Regression")
-        plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black", label="Sample point")
-        plt.scatter(self.polyx, self.polyy, marker="o", c="red",s=7, label="True Point")
-        plt.legend(loc="best")
 
-    def predict(self, theta_, inputX):
+        plt.text(-0.5, -20, text)
+        name0 = name + " (" + str(idx) + "% of samples)"
+        plt.title(name0)
+        plt.plot(testX, resY, label="Regression Line", linewidth=1, c="black")
+        plt.scatter(self.vecX, self.vecY, marker="o", s=3, alpha=0.5, c="blue", label="Sample point")
+        plt.scatter(self.polyx, self.polyy, marker="^", c="r",s=3, label="True Point")
 
+
+        plt.legend(loc=l)
+        filename = "/Users/jieconlin3/Desktop/" + name.replace(" ", "") + "_outliers" + str(idx) + ".eps"
+        fig.savefig(filename, format='eps', dpi=1000)
+
+
+    def predict_bayes(self, mu_theta, sigma_theta, inputX):
+
+        phi_s = self.genPhi(inputX=inputX)
+        predictY = phi_s.T * mu_theta
+        deviation = phi_s.T * sigma_theta * phi_s
+        return predictY, deviation
+
+
+    def predict(self, theta_, inputX=None):
+        if inputX is None:
+            inputX = self.polyx
         theta_ = np.array(theta_[::-1])  # reverse
         theta_ = theta_.flatten()  # change ND array into 1D array
         p = np.poly1d(theta_)
@@ -99,8 +125,10 @@ class Regression:
             matPhi.append(col)
         matPhi = (np.asmatrix(matPhi)).T
         # print matPhi
-        self.matPhi = matPhi
+        # self.matPhi = matPhi
         return matPhi
+
+
 
     def robustReg(self, matPhi=None):
 
@@ -118,7 +146,6 @@ class Regression:
             vecF.append(1.0)
         vecF = np.array(vecF)
 
-
         matIdentity = np.identity(len(self.vecX))
 
         matA_1 = np.column_stack((-matPhi.T, -matIdentity))
@@ -132,7 +159,7 @@ class Regression:
         # theta_ = res.x[:6]
         sol = solvers.lp(matrix(vecF), matrix(matA), matrix(vec_b), solver=solvers)
         theta_ =  list(sol['x'][:theta_len])
-        print theta_
+        # print theta_
 
         # plt.subplot(323, xlabel="Robust")
         # self.plotReg(theta_)
@@ -140,7 +167,7 @@ class Regression:
         return theta_
 
 
-    def baysesianReg(self, alpha_=1.0, matPhi=None):
+    def baysesianReg(self, alpha_=10.4, matPhi=None):
 
         if matPhi is None :
             matPhi = self.genPhi()
@@ -185,20 +212,11 @@ class Regression:
 
         return mu_theta, sigma_theta
 
-        # text = "Error=" + str(err)
 
-        # plt.subplot(324, xlabel="Baysesian")
-        # plt.plot(testX, resY)
-        # plt.errorbar(testX, resY, yerr=varErr, ecolor="red")
-        # plt.text(-0.5, 25, text)
+    def lassoReg(self, matPhi=None, lambda_=2.1):
 
-        # plt.scatter(self.vecX, self.vecY, marker="o", s=9, alpha=0.5, c="black")
-
-
-    def lassoReg(self, matPhi=None):
-        lambda_ = 1.0
         if matPhi is None:
-            matPhi = self.matPhi
+            matPhi = self.genPhi()
             theta_len = self.polyOrder + 1
         else:
             theta_len = len(matPhi)
@@ -230,9 +248,9 @@ class Regression:
         MSE = sum((p_y - t_y) ** 2)/len(preY)
         MAE = sum(abs(p_y - t_y))/len(preY)
 
-        print MSE
-        print "-----------------"
-        print MAE
+        # print MSE
+        # print "-----------------"
+        # print MAE
         return MSE, MAE
 
 
@@ -246,24 +264,30 @@ class Regression:
         error['RR'] = []
         error['Lasso'] = []
         error['RLS'] = []
+        error['Bayes'] = []
         errorX = []
-        for size in range(14, 100, 2):
+        for size in range(12, 100, 10):
             subset_size = size * 0.01 * len(self.vecX)
-            errorX.append(size / 100.0)
-            subset_idx = random.sample(set_idx, int(subset_size))
-            subsetX = []
-            subsetY = []
+            errorX.append(size / 100.0 * len(self.vecX))
+
+
             temErr = {}
             temErr['LS'] = []
             temErr['RR'] = []
             temErr['Lasso'] = []
             temErr['RLS'] = []
-            temError = []
-            for i in range(300):
-                print "---------------" + str(i) + "---------------"
+            temErr['Bayes'] = []
+
+
+            for i in range(1):
+                print size, "---------------" + str(i) + "---------------"
+                subsetX = []
+                subsetY = []
+                subset_idx = random.sample(set_idx, int(subset_size))
                 for idx in subset_idx:
                     subsetX.append(self.vecX[idx])
                     subsetY.append(self.vecY[idx])
+
                 reg_model = Regression()
                 reg_model.vecX = np.array(subsetX)
                 reg_model.vecY = np.array(subsetY)
@@ -272,52 +296,211 @@ class Regression:
                 predicY = reg_model.predict(theta_, self.polyx)
                 err, _ = reg_model.countErr(predicY, self.polyy)
                 temErr['LS'].append(err)
+
+
                 # Robust Regression
                 theta_ = reg_model.robustReg()
                 predicY = reg_model.predict(theta_, self.polyx)
                 err, _ = reg_model.countErr(predicY, self.polyy)
                 temErr['RR'].append(err)
+
+
                 # Regularized Least Square Regression
                 theta_ = reg_model.regularizedLSReg()
                 predicY = reg_model.predict(theta_, self.polyx)
                 err, _ = reg_model.countErr(predicY, self.polyy)
                 temErr['RLS'].append(err)
+
+
                 # Lasso
                 theta_ = reg_model.lassoReg()
                 predicY = reg_model.predict(theta_, self.polyx)
                 err, _ = reg_model.countErr(predicY, self.polyy)
                 temErr['Lasso'].append(err)
 
+
+                # Bayessian
+                mu_theta, sigma = reg_model.baysesianReg()
+                phi_s = self.genPhi(inputX=self.polyx)
+                predictY = phi_s.T * mu_theta
+                err, _ = reg_model.countErr(predictY, self.polyy)
+                temErr['Bayes'].append(err)
+
+
             error['LS'].append(np.mean(np.array(temErr['LS'])))
             error['RR'].append(np.mean(np.array(temErr['RR'])))
             error['RLS'].append(np.mean(np.array(temErr['RLS'])))
             error['Lasso'].append(np.mean(np.array(temErr['Lasso'])))
+            error['Bayes'].append(np.mean(np.array(temErr['Bayes'])))
 
-        self.plotError(errorX, error['LS'], "LS")
-        self.plotError(errorX, error['RR'], "RR")
-        self.plotError(errorX, error['RLS'], "RLS")
-        self.plotError(errorX, error['RLS'], "RLS")
+        self.plotError(errorX, error['LS'], "Least Squares Regression")
+        self.plotError(errorX, error['RR'], "Robust Regression")
+        self.plotError(errorX, error['RLS'], "Regularized LS Regression")
+        self.plotError(errorX, error['RLS'], "Lasso Regression")
+        self.plotError(errorX, error['Bayes'], "Bayessian Regression")
 
 
     def plotError(self, inputX, inputY, name):
-        print inputX
-        print inputY
-        fig = plt.figure()
-        ax = fig.add_subplot(111)
-        ax.scatter(inputX, inputY, s=8, c="red")
-        ax.ylabel("Mean Square Error")
-        ax.xlabel("Size of Subset")
-        ax.title("Least Square Regression")
-        ax.plot(inputX, inputY)
-        ax.legend()
-        fig.savefig()
-        # ax.show()
 
+        fig = plt.figure()
+        # ax = fig.add_subplot(111)
+        plt.scatter(inputX, inputY, s=8, c="red")
+        plt.ylabel("Mean Square Error")
+        plt.xlabel("Size of Subset")
+        plt.title(name)
+        plt.plot(inputX, inputY)
+        plt.legend()
+        # plt.show()
+        filename = "/Users/jieconlin3/Desktop/" + name.replace(" ", "") + "subseterror.eps"
+        fig.savefig(filename, format='eps', dpi=1000)
         return 0
 
     def run(self):
         reg = Regression()
         reg.genSubSetError()
+
+    def plotRrgression(self, name=""):
+
+        theta_ = self.leastSquaresReg()
+        self.plotReg(theta_, "Least Square Regression", idx=name)
+        theta_ = self.regularizedLSReg()
+        self.plotReg(theta_, "Regularized LS Regression", idx=name)
+        theta_ = self.robustReg()
+        self.plotReg(theta_, "Robust Regression", idx=name)
+        theta_ = self.lassoReg()
+        self.plotReg(theta_, "Lasso Regression", idx=name)
+
+        mu_theta, sigma_theta = self.baysesianReg()
+        self.plotReg(theta_=None, mu_theta=mu_theta, sigma_theta=sigma_theta, name="Bayesian Regression", idx=name)
+
+
+    def addOutliers(self):
+
+        y_idx = np.arange(len(self.vecY))
+        num_outlier = int(0.15 * len(self.vecY))
+        outlier_idx = random.sample(y_idx, num_outlier)
+        for idx in outlier_idx:
+            self.vecY[idx] = self.vecY[idx] + (-1) ** int(random.randint(1, 10)) * random.randrange(20, 30)
+
+    def genSubSet(self, size):
+
+        x_idx = np.arange(len(self.vecX))
+        sub_idx = random.sample(x_idx, int(size))
+        new_vecX = []
+        new_vecY = []
+        for idx in sub_idx:
+            new_vecX.append(self.vecX[idx])
+            new_vecY.append(self.vecY[idx])
+        self.vecX = np.array(new_vecX)
+        self.vecY = np.array(new_vecY)
+
+    def getBestLambda(self):
+
+        reg = Regression()
+        # choose hyperparameters
+        l = np.arange(-1.0, 3.0, 0.1)
+        MSE_ls = []
+        MAE_ls = []
+        MSE_lasso = []
+        lsE_best = np.inf
+        lassoE_best = np.inf
+        ls_lambda = 0
+        lasso_lambda = 0
+        for lambda_ in l:
+            if lambda_ == 0:
+                continue
+            theta_ = reg.regularizedLSReg(lambda_=lambda_)
+            predictY = reg.predict(theta_)
+            mse, mae = reg.countErr(predictY, reg.polyy)
+            MSE_ls.append(mse)
+            MAE_ls.append(mae)
+
+            if mse < lsE_best:
+                lsE_best = mse
+                ls_lambda = lambda_
+
+            theta_ = reg.lassoReg(lambda_=lambda_)
+            predictY = reg.predict(theta_)
+            mse, mae = reg.countErr(predictY, reg.polyy)
+            MSE_lasso.append(mse)
+            if mse < lassoE_best:
+                lassoE_best = mse
+                lasso_lambda = lambda_
+
+        fig = plt.figure()
+        plt.title("Regularized LS Regression")
+        plt.xlabel("$\lambda$")
+        plt.ylabel("Mean Square Error")
+        plt.text(0.5, 0.44, ("Best $\lambda$ is " + str(ls_lambda)))
+        plt.scatter(l, MSE_ls, label="MSE", s=5, c="r")
+        # plt.scatter(l, MAE, label="MAE")
+        plt.plot(l, MSE_ls)
+        # plt.plot(l, MAE)
+        plt.legend()
+        fig.savefig("/Users/jieconlin3/Desktop/ls_param.eps", format='eps', dpi=1000)
+
+        fig = plt.figure()
+        plt.title("Lasso Regression")
+        plt.xlabel("$\lambda$")
+        plt.ylabel("Mean Square Error")
+        plt.scatter(l, MSE_lasso, label="MSE", s=5, c="r")
+        # plt.scatter(l, MAE, label="MAE")
+        plt.plot(l, MSE_lasso)
+        plt.text(0.5, 0.44, ("Best $\lambda$ is " + str(lasso_lambda)))
+        # plt.plot(l, MAE)
+        plt.legend()
+        fig.savefig("/Users/jieconlin3/Desktop/lasso_param.eps", format='eps', dpi=1000)
+
+    def getBsetParamBay(self):
+        reg = Regression()
+
+        # get param for bayessian
+        MSE_b = []
+        bamse_best = np.inf
+        bay_alpha = 0
+
+        alpha_ = np.arange(0.1, 20.0, 0.1)
+        for a in alpha_:
+            if a == 0:
+                continue
+
+            mu_theta, _ = reg.baysesianReg(alpha_=a)
+            predictY = reg.genPhi(reg.polyx).T * mu_theta
+            mse, mae = reg.countErr(predictY, reg.polyy)
+            MSE_b.append(mse)
+
+            if mse < bamse_best:
+                bamse_best = mse
+                bay_alpha = a
+
+        fig = plt.figure()
+        plt.title("Bayesian Regression")
+        plt.xlabel("$\lambda$")
+        plt.ylabel("Mean Square Error")
+        plt.plot(alpha_, MSE_b)
+        plt.scatter(alpha_, MSE_b, label="MSE", s=3, c="r")
+
+        plt.text(10, 0.6, ("Best $\\alpha$ is " + str(bay_alpha)))
+        plt.legend()
+        fig.savefig("/Users/jieconlin3/Desktop/bayesian_param.eps", format='eps', dpi=1000)
+
+
+def main():
+
+    r = Regression()
+    l = len(r.vecX)
+    for i in range(15, 100 ,10):
+        size = int(i * 0.01 * l)
+        reg = Regression()
+        reg.genSubSet(size)
+        reg.plotRrgression(name=str(i))
+
+
+
+if __name__ == "__main__":
+    main()
+
+
 
 
 """
@@ -328,6 +511,6 @@ reg.robustReg()   # Robust Regression (RR)
 reg.baysesianReg() # Baysesian Regression (BR)
 reg.lassoReg()   # Lasso Regression (Lasso)
 plt.show()
+reg = Regression()
+reg.genSubSetError()
 """
-# reg = Regression()
-# reg.baysesianReg() # Baysesian Regression (BR)

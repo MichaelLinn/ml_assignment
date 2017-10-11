@@ -57,7 +57,7 @@ class counting_people:
         for x in inputX:
             col = []
             for i in x:
-                col.append(i**2)
+                col.append(i**3)
             matPhi_2.append(col)
         matPhi_2 = (np.asmatrix(matPhi_2))
         matPhi = np.row_stack((matPhi_1, matPhi_2))
@@ -65,6 +65,24 @@ class counting_people:
         # print self.trainX.shape
         # print "Phi:" + str(matPhi.shape)
         return matPhi
+
+    def gen3rdPolyPhi(self, inputX=None):
+
+        if inputX is None:
+            inputX = self.trainX
+
+        matPhi_1 = self.gen2ndPolyPhi(inputX)
+        matPhi_2 = []
+        for x in inputX:
+            col = []
+            for i in x:
+                col.append(i**3)
+            matPhi_2.append(col)
+        matPhi_2 = (np.asmatrix(matPhi_2))
+        matPhi = np.row_stack((matPhi_1, matPhi_2))
+
+        return matPhi
+
 
     def predict(self, theta_, inputX, phi_type=1):
 
@@ -79,6 +97,13 @@ class counting_people:
             theta_ = np.array(theta_)
             theta_ = np.mat(theta_.flatten()).T  # change ND array into 1D array
             phi_ = self.gen2ndPolyPhi(inputX=inputX.T)
+            predictY = phi_.T * theta_
+            return predictY
+
+        if phi_type == 3:
+            theta_ = np.array(theta_)
+            theta_ = np.mat(theta_.flatten()).T  # change ND array into 1D array
+            phi_ = self.gen3rdPolyPhi(inputX=inputX.T)
             predictY = phi_.T * theta_
             return predictY
 
@@ -100,9 +125,9 @@ class counting_people:
         mse, mae = reg.countErr(predictY, self.testY)
         err_str = "MSE=" + str(mse) + "\nMAE=" + str(mae)
         plt.text(200, -12, err_str)
-        plt.title("Least Square Regression ($\phi(x)=[x;x^2]$)")
+        plt.title("Least Square Regression ($\phi(x)=[x]$)")
         plt.legend(loc="best")
-        fig.savefig("/Users/jieconlin3/Desktop/ls_cp_2phi.eps", format='eps', dpi=1000)
+        fig.savefig("/Users/jieconlin3/Desktop/ls_cp_1phi.eps", format='eps', dpi=1000)
         # plt.show()
 
     def rlsRegression(self):
@@ -122,9 +147,9 @@ class counting_people:
         mse, mae = reg.countErr(predictY, self.testY)
         err_str = "MSE=" + str(mse) + "\nMAE=" + str(mae)
         plt.text(200, -12, err_str)
-        plt.title("Regularized Least Square Regression ($\phi(x)=[x;x^2]$)")
+        plt.title("Regularized Least Square Regression ($\phi(x)=[x]$)")
         plt.legend(loc="best")
-        fig.savefig("/Users/jieconlin3/Desktop/rls_cp_2phi.eps", format='eps', dpi=1000)
+        fig.savefig("/Users/jieconlin3/Desktop/rls_cp_1phi.eps", format='eps', dpi=1000)
         # plt.show()
 
 
@@ -145,9 +170,9 @@ class counting_people:
         mse, mae = reg.countErr(predictY, self.testY)
         err_str = "MSE=" + str(mse) + "\nMAE=" + str(mae)
         plt.text(200, -12, err_str)
-        plt.title("Robust Regression ($\phi(x)=[x;x^2]$)")
+        plt.title("Robust Regression ($\phi(x)=[x]$)")
         plt.legend(loc="best")
-        fig.savefig("/Users/jieconlin3/Desktop/rr_cp.eps", format='eps', dpi=1000)
+        fig.savefig("/Users/jieconlin3/Desktop/rr_cp_1phi.eps", format='eps', dpi=1000)
         # plt.show()
 
     def lassoRegression(self):
@@ -169,9 +194,9 @@ class counting_people:
         mse, mae = reg.countErr(predictY, self.testY)
         err_str = "MSE=" + str(mse) + "\nMAE=" + str(mae)
         plt.text(200, -12, err_str)
-        plt.title("Lasso Regression ($\phi(x)=[x;x^2]$)")
+        plt.title("Lasso Regression ($\phi(x)=[x]$)")
         plt.legend(loc="best")
-        fig.savefig("/Users/jieconlin3/Desktop/lasso_cp_2phi.eps", format='eps', dpi=1000)
+        fig.savefig("/Users/jieconlin3/Desktop/lasso_cp_1phi.eps", format='eps', dpi=1000)
         # plt.show()
 
     def baysesianRegression(self):
@@ -193,16 +218,20 @@ class counting_people:
         mse, mae = reg.countErr(predictY, self.testY)
         err_str = "MSE=" + str(mse) + "\nMAE=" + str(mae)
         plt.text(200, -12, err_str)
-        plt.title("Bayessian Regression ($\phi(x)=[x;x^2]$)")
+        plt.title("Bayessian Regression ($\phi(x)=[x]$)")
         plt.legend(loc="best")
-        fig.savefig("/Users/jieconlin3/Desktop/bayessian_cp_2phi.eps", format='eps', dpi=1000)
+        fig.savefig("/Users/jieconlin3/Desktop/bayessian_cp_1phi.eps", format='eps', dpi=1000)
 
 
 
+def main():
 
-t = counting_people()
-t.lsRegression()
-t.rlsRegression()
-t.robustRegression()
-t.lassoRegression()
-t.baysesianRegression()
+    t = counting_people()
+    t.lsRegression()
+    t.rlsRegression()
+    t.robustRegression()
+    t.lassoRegression()
+    t.baysesianRegression()
+
+if __name__ == "__main__":
+    main()
