@@ -7,7 +7,7 @@
 
 import numpy as np
 import math
-
+import random
 class em_mixPossion:
 
 
@@ -17,22 +17,25 @@ class em_mixPossion:
 
     def __init__(self, K):
 
-        self.x_selected = self.x_Antwerp
+        self.x_selected = self.x_London
         self.K = K
         d = 2.0/(K*(K+1))
         self.X = np.array([])
         self.pi_ = np.zeros(self.K) + 1.0/self.K
         # self.pi_ = np.array([i*d for i in range(1, self.K+1)])
         # self.pi_ = self.pi_[::-1]
-        self.lambda_ = np.ones(K)
+        self.lambda_ = []
+        for i in range(self.K):
+            self.lambda_.append(random.random())
+        self.lambda_ = np.array(self.lambda_)
 
+        print self.lambda_
         for i in range(len(self.x_selected)):
             t = np.ones(self.x_selected[i]) * i
             self.X = np.concatenate((self.X, t))
 
 
     def genZ_(self, x, j):
-
         denominator = 0
         numerator = 0
         for k in range(self.K):
@@ -50,9 +53,7 @@ class em_mixPossion:
     def updataParam(self, j):
 
         n_j = np.sum(np.array([self.genZ_(self.X[i], j) for i in range(len(self.X))]))
-
         pi_j = n_j / len(self.X)
-
         lambda_j = (1.0 / n_j) * np.sum(np.array([self.genZ_(self.X[i], j) * self.X[i] for i in range(len(self.X))]))
 
         self.pi_[j] = pi_j
@@ -68,8 +69,9 @@ class em_mixPossion:
 
     def main(self):
 
-        for j in range(self.K):
-            for i in range(1000):
+
+        for i in range(1000):
+            for j in range(self.K):
                 print "-----------", i, "-----------"
                 self.updataParam(j)
 
