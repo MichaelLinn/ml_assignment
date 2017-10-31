@@ -11,7 +11,8 @@
 import pa2
 import numpy as np
 import pylab as pl
-from  PIL import Image
+from PIL import Image
+
 
 import scipy.io as sio
 
@@ -26,12 +27,12 @@ def demo():
     ## extract features from image (step size = 7)
     X,L = pa2.getfeatures(img, 7)
 
-    ## Call kmeans function in scipy.  You need to write this yourself!
-    C,Y = vq.kmeans2(vq.whiten(X.T), 2, iter=1000, minit='random')
 
-    
+    ## Call kmeans function in scipy.  You need to write this yourself!
+    C,Y = vq.kmeans2(vq.whiten(X.T), 2, iter=50000, minit='random')
+
     Y = Y + 1 # Use matlab 1-index labeling
-    ## 
+    ##
 
     # make segmentation image from labels
     segm = pa2.labels2seg(Y,L)

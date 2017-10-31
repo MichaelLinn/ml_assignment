@@ -7,6 +7,7 @@
 import numpy as np
 import matplotlib.pylab as plt
 import os
+from numpy.linalg import cholesky
 
 class em_GMM:
 
@@ -40,13 +41,12 @@ class em_GMM:
         self.pi_ = np.ones(self.class_k) * 1.0/self.class_k
 
 
-
-
     def loadData(self):
         os.getcwd()
-        dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataA_X.txt"
+        dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataC_X.txt"
         data = np.loadtxt(dataA_file)
         self.inputX = data.T
+
 
     def gen_Z(self, i, j):
 
@@ -61,24 +61,56 @@ class em_GMM:
         # print "z:", z_ij
         return float(z_ij)
 
+
+    def gen_PreciseZ(self, i, j):
+        max_l = -np.inf
+        log_pxi = 0
+        log_pxij = 0
+        log_ga = []
+        for k in range(self.class_k):
+            tem = self.logGaussian(i, k)
+            log_ga.append(tem)
+            if tem > max_l:
+                max_l = tem
+            if k == j:
+                log_pxij = tem + np.log(self.pi_[j])
+
+        log_pxi = max_l + np.log(np.sum(np.exp(np.array(log_ga) - max_l)))
+        z_ij = np.exp(log_pxij - log_pxi)
+        return float(z_ij)
+
+    def logGaussian(self, i, j):
+
+        mu_ = np.mat(self.mu_[j]).T
+        cov_ = np.mat(self.sigma_[j])
+        inputX = np.mat(self.inputX[i]).T
+
+        L_mat = cholesky(cov_)
+
+        logDetCov = 2.0 * np.sum(np.log(np.diag(L_mat)))
+
+        res = - 0.5 * self.dimX * np.log(2 * np.pi) - 0.5 * logDetCov \
+              - 0.5 * (inputX - mu_).T * np.linalg.inv(cov_) * (inputX - mu_)
+
+        return float(res)
+
+
     def gaussianDistribution(self, i, j):
 
         mu_ = np.mat(self.mu_[j]).T
         cov_ = np.mat(self.sigma_[j])
         inputX = np.mat(self.inputX[i]).T
 
-        # print inputX
-        # print i,":",j, "----\n", cov_
         res = 1.0/(np.power((2 * np.pi), 0.5 * self.dimX) * np.power(np.linalg.det(cov_), 0.5)) * np.exp(-0.5 * (inputX - mu_).T * np.linalg.inv(cov_) * (inputX - mu_))
 
-        return res
+        return float(res)
 
     def updateParams(self, j):
 
         n = len(self.inputX)
         z_ = []
         for i in range(n):
-            z_.append(self.gen_Z(i, j))
+            z_.append(self.gen_PreciseZ(i, j))
 
         # print z_
         n_j = sum(z_)
@@ -114,7 +146,7 @@ class em_GMM:
             z_i = - np.inf
             label = -1
             for k in range(self.class_k):
-                z_ik = self.gen_Z(i, k)
+                z_ik = self.gen_PreciseZ(i, k)
                 if z_ik > z_i:
                     z_i = z_ik
                     label = k
@@ -122,20 +154,23 @@ class em_GMM:
 
         fig = plt.figure()
 
+        print dataMap
 
         for c, data in dataMap.items():
             data = np.array(data)
+            if len(data) <= 0:
+                continue
             x = np.array(data[:, 0])
             y = np.array(data[:, 1])
             plt.scatter(x, y, s=5)
 
-        fig.savefig("pic.eps",format='eps', dpi=1000)
+        fig.savefig("em_GMM_1C.eps",format='eps', dpi=1000)
 
 
 def main():
     test = em_GMM()
     print test.dimX
-    for i in range(70):
+    for i in range(30):
         print "--------", i, "--------"
         for j in range(test.class_k):
             test.updateParams(j)
