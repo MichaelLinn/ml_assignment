@@ -70,13 +70,13 @@ class kmeans:
                 if clusterAssment[i, 0] != minIdx:
                     clusterChanged = True
                 clusterAssment[i, :] = minIdx, minDist
-                print minIdx,":",minDist
+                # print minIdx,":",minDist
             for cent in range(self.k):
                 ptsInClust = self.dataset[np.nonzero(clusterAssment[:, 0] == cent)[0]]
                 centroids[cent, :] = np.mean(ptsInClust, axis=0)
                 # print centroids
 
-            if t > 5000:
+            if t > 1000:
                 clusterChanged = False
 
         # print centroids, clusterAssment
@@ -108,17 +108,17 @@ class kmeans:
 
 def main(dataset = None):
 
-    img = Image.open('../data/PA2-cluster-images/images/12003.jpg')
+    img = Image.open('../data/PA2-cluster-images/images/62096.jpg')
 
     pl.subplot(1, 3, 1)
     pl.imshow(img)
     X, L = pa2.getfeatures(img, 7)
 
     # print X.T
-    # X = vq.whiten(X.T)
-    X = X.T
-    lambda_ = 0.1
-    X[:, 2:4] = X[:, 2:4] * lambda_
+    X = vq.whiten(X.T)
+    # X = X.T
+    # lambda_ = 0.1
+    # X[:, 2:4] = X[:, 2:4] * lambda_
 
     km = kmeans(2, data=X)
     cent, res = km.kmeansClustering()
@@ -134,8 +134,8 @@ def main(dataset = None):
     csegm = pa2.colorsegms(segm, img)
     pl.subplot(1, 3, 3)
     pl.imshow(csegm)
-    pl.show()
-    # pl.savefig("km_1A.eps", format='eps', dpi=1000)
+    # pl.show()
+    pl.savefig("kmean_62096.eps", format='eps', dpi=1000)
 
 if __name__ == '__main__':
     main()

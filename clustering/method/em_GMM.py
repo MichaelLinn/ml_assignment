@@ -8,20 +8,27 @@ import numpy as np
 import matplotlib.pylab as plt
 import os
 from numpy.linalg import cholesky
+import pylab as pl
+from PIL import Image
+import picProcess as pa2
+import time
+import scipy.cluster.vq as vq
+
 
 class em_GMM:
 
     # inputX = np.matrix([[1, 6, 3], [4, 5, 6], [3, 2, 1], [1, 3, 7]]).T
     mu_ = []
     sigma_ = []
-    class_k = 4
 
-    def __init__(self):
+    def __init__(self, class_k = 4, data=None):
 
-        self.loadData()
+        self.class_k = class_k
+        self.loadData(data)
 
         self.dimX = len(self.inputX[0])
         t_mu = []
+
         for i in range(len(self.inputX.T)):
             t_max = max(self.inputX.T[i])
             t_min = min(self.inputX.T[i])
@@ -30,22 +37,27 @@ class em_GMM:
                 tt_mu.append(np.random.uniform(t_min, t_max))
             t_mu.append(np.array(tt_mu))
         t_mu = np.array(t_mu)
+
         for i in range(self.class_k):
             self.mu_.append(t_mu[:, i])
-
 
         for i in range(self.class_k):
             t_sigma = np.eye(self.dimX)
             self.sigma_.append(t_sigma)
 
         self.pi_ = np.ones(self.class_k) * 1.0/self.class_k
+        print self.mu_
 
 
-    def loadData(self):
-        os.getcwd()
-        dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataC_X.txt"
-        data = np.loadtxt(dataA_file)
-        self.inputX = data.T
+    def loadData(self, data=None):
+
+        if data is None:
+            os.getcwd()
+            dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataC_X.txt"
+            d = np.loadtxt(dataA_file)
+            self.inputX = d.T
+
+        self.inputX = data
 
 
     def gen_Z(self, i, j):
@@ -64,7 +76,6 @@ class em_GMM:
 
     def gen_PreciseZ(self, i, j):
         max_l = -np.inf
-        log_pxi = 0
         log_pxij = 0
         log_ga = []
         for k in range(self.class_k):
@@ -85,6 +96,7 @@ class em_GMM:
         cov_ = np.mat(self.sigma_[j])
         inputX = np.mat(self.inputX[i]).T
 
+        # print cov_
         L_mat = cholesky(cov_)
 
         logDetCov = 2.0 * np.sum(np.log(np.diag(L_mat)))
@@ -101,7 +113,8 @@ class em_GMM:
         cov_ = np.mat(self.sigma_[j])
         inputX = np.mat(self.inputX[i]).T
 
-        res = 1.0/(np.power((2 * np.pi), 0.5 * self.dimX) * np.power(np.linalg.det(cov_), 0.5)) * np.exp(-0.5 * (inputX - mu_).T * np.linalg.inv(cov_) * (inputX - mu_))
+        res = 1.0/(np.power((2 * np.pi), 0.5 * self.dimX) * np.power(np.linalg.det(cov_), 0.5)) * \
+              np.exp(-0.5 * (inputX - mu_).T * np.linalg.inv(cov_) * (inputX - mu_))
 
         return float(res)
 
@@ -166,17 +179,68 @@ class em_GMM:
 
         fig.savefig("em_GMM_1C.eps",format='eps', dpi=1000)
 
+    def solveProblem1(self):
+        for i in range(30):
+            print "--------", i, "--------"
+            for j in range(self.class_k):
+                self.updateParams(j)
+        self.plotRes()
 
-def main():
-    test = em_GMM()
-    print test.dimX
-    for i in range(30):
-        print "--------", i, "--------"
-        for j in range(test.class_k):
-            test.updateParams(j)
-    test.plotRes()
+    def runEMGMM(self, iteration=30):
+        for i in range(iteration):
+            print "--------", i, "--------"
+            for j in range(self.class_k):
+                self.updateParams(j)
+
+
+def imageSegment():
+    img = Image.open('../data/PA2-cluster-images/images/62096.jpg')
+    fig = pl.figure()
+    pl.subplot(1, 3, 1)
+    pl.imshow(img)
+    X, L = pa2.getfeatures(img, 7)
+    # print X.T
+    # X = vq.whiten(X.T)
+    X = X.T
+    # cent, res = km.kmeansClustering()
+    # km.plotRes(centroids=cent, clusterAssment=res)
+    X = vq.whiten(X)
+    em = em_GMM(class_k=2, data=X)
+    em.runEMGMM(iteration=100)
+
+    # Get clustering result
+    Y = []
+    for i in range(len(em.inputX)):
+        z_i = - np.inf
+        label = -1
+        for k in range(em.class_k):
+            z_ik = em.gen_PreciseZ(i, k)
+            if z_ik > z_i:
+                z_i = z_ik
+                label = k
+        Y.append(label)
+    # make segmentation image from labels
+    Y = np.array(Y)
+    Y = Y + 1
+    segm = pa2.labels2seg(np.array(Y), L)
+    pl.subplot(1, 3, 2)
+    pl.imshow(segm)
+
+    # color the segmentation image
+    csegm = pa2.colorsegms(segm, img)
+    pl.subplot(1, 3, 3)
+    pl.imshow(csegm)
+    # pl.show()
+    fig.savefig("emGMM_62096.eps", format='eps', dpi=1000)
 
 if __name__ == "__main__":
-    main()
+    try:
+        imageSegment()
+    except Exception:
+        pass
+
+
+
+
 
 

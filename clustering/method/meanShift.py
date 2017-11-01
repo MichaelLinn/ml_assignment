@@ -7,22 +7,29 @@
 import numpy as np
 import os
 import matplotlib.pylab as plt
-
+import pylab as pl
+from PIL import Image
+import picProcess as pa2
+import scipy.cluster.vq as vq
 
 class meanShift:
 
     h = 1.65
-    def __init__(self):
-        self.loadData()
+    def __init__(self,data=None):
+        self.loadData(data)
         self.n_ = len(self.inputX)
         self.dim = len(self.inputX[0])
 
-    def loadData(self):
-        os.getcwd()
-        dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataA_X.txt"
-        data = np.loadtxt(dataA_file)
-        self.inputX = data.T
-        self.inputX_mu = data.T
+    def loadData(self, data):
+        if data is None:
+            os.getcwd()
+            dataA_file = "../data/PA2-cluster-data/cluster_data_text/cluster_data_dataA_X.txt"
+            data = np.loadtxt(dataA_file)
+            self.inputX = data.T
+            self.inputX_mu = data.T
+        else:
+            self.inputX = data
+            self.inputX_mu = data
 
 
     def gaussian(self, inputX, mu_):
@@ -57,40 +64,66 @@ class meanShift:
             print "--------",i,"--------"
             mu_t = self.inputX_mu[i]
             while(True):
-                # print mu_t
+
                 tem = self.updateX_i(i, mu_t)
-                # print tem
-                # print mu_t
-                # print "***************"
-                if np.sum(np.abs(mu_t - tem)) < 0.0001:
+                if np.sum(np.abs(mu_t - tem)) < 0.01:
                     break
                 mu_t = tem
             label.append(mu_t)
         return np.array(label)
 
+def solveProblem1():
+    ms = meanShift()
+    label = ms.run()
+
+    label = np.around(label, decimals=2)
+
+    x_value = np.unique(label[:, 0])
+    y_value = np.unique(label[:, 1])
+
+    print len(x_value)
+
+    fig = plt.figure()
+    plt.scatter(label[:, 0], label[:, 1], s=2, c="black")
+    plt.scatter(ms.inputX[:, 0], ms.inputX[:, 1], s=1)
+
+    for item in x_value:
+        index = label[:, 0] == item
+        plt.scatter(ms.inputX[index, 0], ms.inputX[index, 1], s=2)
+    fig.savefig("meashift_1A.eps", format='eps', dpi=1000)
+
+def imageSegament():
+    img = Image.open('../data/PA2-cluster-images/images/12003.jpg')
+    fig = pl.figure()
+    pl.subplot(1, 3, 1)
+    pl.imshow(img)
+    X, L = pa2.getfeatures(img, 7)
+    # print X.T
+    # X = vq.whiten(X.T)
+    X = X.T
+    # cent, res = km.kmeansClustering()
+    # km.plotRes(centroids=cent, clusterAssment=res)
+    X = vq.whiten(X)
+
+    ms = meanShift(data=X)
+    label = ms.run()
+
+    # Get clustering result
+    Y = label
+
+    # make segmentation image from labels
+    Y = np.array(Y)
+    Y = Y + 1
+    segm = pa2.labels2seg(np.array(Y), L)
+    pl.subplot(1, 3, 2)
+    pl.imshow(segm)
+
+    # color the segmentation image
+    csegm = pa2.colorsegms(segm, img)
+    pl.subplot(1, 3, 3)
+    pl.imshow(csegm)
+    fig.savefig("meanShift_12003.eps", format='eps', dpi=1000)
 
 
-ms = meanShift()
-label = ms.run()
-
-label = np.around(label, decimals=2)
-
-x_value = np.unique(label[:, 0])
-y_value = np.unique(label[:, 1])
-
-print len(x_value)
-
-fig = plt.figure()
-plt.scatter(label[:, 0], label[:, 1], s=2, c="black")
-plt.scatter(ms.inputX[:, 0], ms.inputX[:, 1], s=1)
-
-for item in x_value:
-    index = label[:, 0] == item
-    plt.scatter(ms.inputX[index, 0], ms.inputX[index, 1], s=2)
-
-fig.savefig("meashift_1A.eps", format='eps', dpi=1000)
-
-
-
-
-
+if __name__ == "__main__":
+    imageSegament()
