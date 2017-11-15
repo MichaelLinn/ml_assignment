@@ -6,10 +6,13 @@
 
 import numpy as np
 import os
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pylab as plt
 import pylab as pl
 from PIL import Image
 import picProcess as pa2
+
 import scipy.cluster.vq as vq
 from sklearn.cluster import MeanShift
 
