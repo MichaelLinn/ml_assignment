@@ -106,7 +106,7 @@ class kmeans:
         fig.savefig("pic")
 
 
-def main(dataset = None):
+def main(dataset=None):
 
     img = Image.open('../data/PA2-cluster-images/images/62096.jpg')
 

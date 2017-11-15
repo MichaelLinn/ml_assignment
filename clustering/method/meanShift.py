@@ -11,10 +11,12 @@ import pylab as pl
 from PIL import Image
 import picProcess as pa2
 import scipy.cluster.vq as vq
+from sklearn.cluster import MeanShift
 
 class meanShift:
 
     h = 1.65
+
     def __init__(self,data=None):
         self.loadData(data)
         self.n_ = len(self.inputX)
@@ -43,14 +45,27 @@ class meanShift:
         # print res
         return float(res)
 
+    def kernel_pic(self, inputX, mu_):
+
+        h_c = 5.0
+        h_p = 14.0
+
+        res = 1.0 / (np.power(2 * np.pi * h_c * h_p, 2))
+        expon = -1.0 / (2*np.power(h_c, 2)) * np.sum(np.power((inputX[:2] - mu_[:2]), 2)) \
+                -1.0 / (2*np.power(h_p, 2)) * np.sum(np.power((inputX[2:] - mu_[2:]), 2))
+
+        res = res * np.exp(expon)
+        return float(res)
+
+
     def updateX_i(self, i, mu_):
 
         n = self.n_
         numertor = 0
         denomonator = 0
         for j in range(n):
-            ga = self.gaussian(self.inputX[j], mu_)
-
+            # ga = self.gaussian(self.inputX[j], mu_)
+            ga = self.kernel_pic(self.inputX[j], mu_)
             numertor += self.inputX[j] * ga
             denomonator += ga
 
@@ -59,18 +74,22 @@ class meanShift:
         return res
 
     def run(self):
-        label = []
+        mu_ = []
         for i in range(self.n_):
             print "--------",i,"--------"
             mu_t = self.inputX_mu[i]
+            j = 0
             while(True):
-
+                j += 1
+                if j > 2000:
+                    break
                 tem = self.updateX_i(i, mu_t)
                 if np.sum(np.abs(mu_t - tem)) < 0.01:
                     break
                 mu_t = tem
-            label.append(mu_t)
-        return np.array(label)
+
+            mu_.append(mu_t)
+        return np.array(mu_)
 
 def solveProblem1():
     ms = meanShift()
@@ -103,14 +122,25 @@ def imageSegament():
     X = X.T
     # cent, res = km.kmeansClustering()
     # km.plotRes(centroids=cent, clusterAssment=res)
-    X = vq.whiten(X)
+    # X = vq.whiten(X)
 
     ms = meanShift(data=X)
-    label = ms.run()
+    mu_all = ms.run()
+    mu_all = np.around(mu_all, decimals=2)
+    x_mu = np.unique(mu_all[:, 0])
+    # y_mu = np.unique(mu_all[:, 1])
+    label = np.zeros(len(ms.inputX))
+    cls = 0
+    for item in x_mu:
+        idx = mu_all[:, 0] == item
+        label[idx] = cls
+        cls += 1
+
+    # ms = MeanShift(bandwidth=1.2, bin_seeding=True).fit(X)
 
     # Get clustering result
+    # Y = np.array(ms.labels_).flatten()
     Y = label
-
     # make segmentation image from labels
     Y = np.array(Y)
     Y = Y + 1
@@ -122,7 +152,7 @@ def imageSegament():
     csegm = pa2.colorsegms(segm, img)
     pl.subplot(1, 3, 3)
     pl.imshow(csegm)
-    fig.savefig("meanShift_12003.eps", format='eps', dpi=1000)
+    fig.savefig("test.eps", format='eps', dpi=1000)
 
 
 if __name__ == "__main__":
