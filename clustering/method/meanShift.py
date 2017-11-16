@@ -20,10 +20,12 @@ class meanShift:
 
     h = 1.65
 
-    def __init__(self,data=None):
+    def __init__(self,data=None, h_c=8.0, h_p=15.0):
         self.loadData(data)
         self.n_ = len(self.inputX)
         self.dim = len(self.inputX[0])
+        self.h_c = h_c
+        self.h_p = h_p
 
     def loadData(self, data):
         if data is None:
@@ -50,8 +52,8 @@ class meanShift:
 
     def kernel_pic(self, inputX, mu_):
 
-        h_c = 5.0
-        h_p = 14.0
+        h_c = self.h_c
+        h_p = self.h_p
 
         res = 1.0 / (np.power(2 * np.pi * h_c * h_p, 2))
         expon = -1.0 / (2*np.power(h_c, 2)) * np.sum(np.power((inputX[:2] - mu_[:2]), 2)) \
@@ -127,7 +129,7 @@ def imageSegament():
     # km.plotRes(centroids=cent, clusterAssment=res)
     # X = vq.whiten(X)
 
-    ms = meanShift(data=X)
+    ms = meanShift(data=X, h_c=15.0, h_p=18.0)
     mu_all = ms.run()
     mu_all = np.around(mu_all, decimals=2)
     x_mu = np.unique(mu_all[:, 0])
@@ -148,6 +150,8 @@ def imageSegament():
     Y = np.array(Y)
     Y = Y + 1
     segm = pa2.labels2seg(np.array(Y), L)
+    s = "h_c=" + str(ms.h_c) + ", " + "h_p=" + str(ms.h_p)
+    pl.title(s)
     pl.subplot(1, 3, 2)
     pl.imshow(segm)
 
@@ -155,7 +159,8 @@ def imageSegament():
     csegm = pa2.colorsegms(segm, img)
     pl.subplot(1, 3, 3)
     pl.imshow(csegm)
-    fig.savefig("test.eps", format='eps', dpi=1000)
+
+    fig.savefig("test1.eps", format='eps', dpi=1000)
 
 
 if __name__ == "__main__":
