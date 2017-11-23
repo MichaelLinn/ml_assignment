@@ -116,8 +116,16 @@ def solveProblem1():
         plt.scatter(ms.inputX[index, 0], ms.inputX[index, 1], s=2)
     fig.savefig("meashift_1A.eps", format='eps', dpi=1000)
 
-def imageSegament():
-    img = Image.open('../data/PA2-cluster-images/images/12003.jpg')
+def imageSegament(image_name, h_c=15., h_p=20.):
+
+    imageFile = '../data/PA2-cluster-images/images/' + str(image_name)
+
+    name = str(image_name).split(".")[0] + "_" + str(int(h_c)) + "_" + str(int(h_p)) + ".eps"
+
+    print imageFile
+    print name
+
+    img = Image.open(imageFile)
     fig = pl.figure()
     pl.subplot(1, 3, 1)
     pl.imshow(img)
@@ -129,7 +137,7 @@ def imageSegament():
     # km.plotRes(centroids=cent, clusterAssment=res)
     # X = vq.whiten(X)
 
-    ms = meanShift(data=X, h_c=15.0, h_p=18.0)
+    ms = meanShift(data=X, h_c=h_c, h_p=h_p)
     mu_all = ms.run()
     mu_all = np.around(mu_all, decimals=2)
     x_mu = np.unique(mu_all[:, 0])
@@ -160,8 +168,22 @@ def imageSegament():
     pl.subplot(1, 3, 3)
     pl.imshow(csegm)
 
-    fig.savefig("test1.eps", format='eps', dpi=1000)
+    fig.savefig(name, format='eps', dpi=1000)
+
+def main():
+    os.getcwd()
+    imageFilePath = "../data/PA2-cluster-images/images"
+    image_list = []
+    for file in os.listdir(imageFilePath):
+        if file.endswith(".jpg"):
+            image_list.append(file)
+    print image_list
+
+    for img in image_list:
+        for h_c in range(10, 21, 2):
+            for h_p in range(10, 21, 2):
+                imageSegament(img, h_c, h_p)
 
 
 if __name__ == "__main__":
-    imageSegament()
+    main()
