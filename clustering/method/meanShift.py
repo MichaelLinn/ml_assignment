@@ -86,10 +86,10 @@ class meanShift:
             j = 0
             while(True):
                 j += 1
-                if j > 2000:
+                if j > 200:
                     break
                 tem = self.updateX_i(i, mu_t)
-                if np.sum(np.abs(mu_t - tem)) < 0.01:
+                if np.sum(np.abs(mu_t - tem)) < 0.1:
                     break
                 mu_t = tem
 
@@ -120,7 +120,7 @@ def imageSegament(image_name, h_c=15., h_p=20.):
 
     imageFile = '../data/PA2-cluster-images/images/' + str(image_name)
 
-    name = str(image_name).split(".")[0] + "_" + str(int(h_c)) + "_" + str(int(h_p)) + ".eps"
+    name = "../result/meanshift" + str(image_name).split(".")[0] + "_" + str(int(h_c)) + "_" + str(int(h_p)) + ".eps"
 
     print imageFile
     print name
@@ -182,6 +182,8 @@ def main():
     for img in image_list:
         for h_c in range(10, 21, 2):
             for h_p in range(10, 21, 2):
+                print h_c
+                print h_p
                 imageSegament(img, h_c, h_p)
 
 
