@@ -120,7 +120,7 @@ def imageSegament(image_name, h_c=15., h_p=20.):
 
     imageFile = '../data/PA2-cluster-images/images/' + str(image_name)
 
-    name = "../result/meanshift" + str(image_name).split(".")[0] + "_" + str(int(h_c)) + "_" + str(int(h_p)) + ".eps"
+    name = "../result/meanshift/" + str(image_name).split(".")[0] + "_" + str(int(h_c)) + "_" + str(int(h_p)) + ".eps"
 
     print imageFile
     print name
@@ -171,6 +171,7 @@ def imageSegament(image_name, h_c=15., h_p=20.):
     fig.savefig(name, format='eps', dpi=1000)
 
 def main():
+
     os.getcwd()
     imageFilePath = "../data/PA2-cluster-images/images"
     image_list = []
@@ -178,10 +179,10 @@ def main():
         if file.endswith(".jpg"):
             image_list.append(file)
     print image_list
-
+    inver = image_list[::-1]
     for img in image_list:
-        for h_c in range(10, 21, 2):
-            for h_p in range(10, 21, 2):
+        for h_c in range(8, 21, 4):
+            for h_p in range(8, 21, 4):
                 print h_c
                 print h_p
                 imageSegament(img, h_c, h_p)
