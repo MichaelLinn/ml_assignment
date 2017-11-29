@@ -139,7 +139,7 @@ def imageSegament(image_name, h_c=15., h_p=20.):
 
     ms = meanShift(data=X, h_c=h_c, h_p=h_p)
     mu_all = ms.run()
-    mu_all = np.around(mu_all, decimals=2)
+    mu_all = np.around(mu_all, decimals=0)
     x_mu = np.unique(mu_all[:, 0])
     # y_mu = np.unique(mu_all[:, 1])
     label = np.zeros(len(ms.inputX))
@@ -181,8 +181,8 @@ def main():
     print image_list
     inver = image_list[::-1]
     for img in image_list:
-        for h_c in range(8, 21, 4):
-            for h_p in range(8, 21, 4):
+        for h_c in range(10, 21, 5):
+            for h_p in range(10, 21, 5):
                 print h_c
                 print h_p
                 imageSegament(img, h_c, h_p)

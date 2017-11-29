@@ -4,10 +4,10 @@ notify_user =
 getenv      = True
 #####JOB#####
 requirements= (Machine=="")
-executable  = /usr/bin/python
+executable  = /usr/bin/python:
 arguments   = ./meanShift.py
 input       =
 output      = ./meanShift.out
 error       = $(output).err
 log         = ./meanShift.log
-queue      
+queue
